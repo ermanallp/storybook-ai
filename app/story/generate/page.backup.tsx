@@ -51,10 +51,11 @@ function GenerateStoryContent() {
                 // Save initial text-only story
                 await saveStory(story);
 
-                setStatus(`Resimler hazırlanıyor...`);
+                // Process images sequentially to avoid rate limits and ensure completion
+                for (let i = 0; i < story.pages.length; i++) {
+                    const page = story.pages[i];
+                    setStatus(`Resimler çiziliyor... (${i + 1}/${story.pages.length})`);
 
-                // Process images in parallel
-                const imagePromises = story.pages.map(async (page, i) => {
                     try {
                         const imageResponse = await fetch('/api/generate-image', {
                             method: 'POST',
@@ -66,10 +67,16 @@ function GenerateStoryContent() {
                             const imageData = await imageResponse.json();
                             if (imageData.imageUrl) {
                                 page.imageUrl = imageData.imageUrl;
+                                // Update storage incrementally so we don't lose progress if stuck
+                                await saveStory(story);
 
                                 // Preload image in browser
-                                const img = new Image();
-                                img.src = imageData.imageUrl!;
+                                await new Promise((resolve) => {
+                                    const img = new Image();
+                                    img.src = imageData.imageUrl!;
+                                    img.onload = resolve;
+                                    img.onerror = resolve;
+                                });
                             }
                         } else {
                             const errorText = await imageResponse.text();
@@ -78,13 +85,10 @@ function GenerateStoryContent() {
                     } catch (err) {
                         console.error(`Error fetching image for page ${i + 1}:`, err);
                     }
-                });
 
-                await Promise.all(imagePromises);
-
-                // Save final story with all available images
-                await saveStory(story);
-
+                    // Add a small delay to avoid hitting rate limits too hard
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                }
 
                 setStatus('Hikayen hazır! Keyifli okumalar...');
                 // Short delay to let user see completion message

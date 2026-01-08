@@ -43,12 +43,10 @@ export default function Home() {
         </div>
 
         <h1 className="text-3xl font-bold text-center mb-2 drop-shadow-md">
-          Personalized AI Stories <br />
-          <span className="text-2xl opacity-90">Kişiselleştirilmiş Masallar</span>
+          Sihirli Hikayeler
         </h1>
         <p className="text-center text-blue-100 mb-8">
-          Create magical AI bedtime stories in seconds. <br />
-          <span className="text-sm opacity-80">Çocuğunuz için saniyeler içinde özel masallar yaratın!</span>
+          Çocuğunuz için onun ile beraber özel masallar yaratın!
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
