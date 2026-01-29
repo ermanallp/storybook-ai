@@ -55,40 +55,39 @@ export async function POST(request: Request) {
 
         const model = genAI.getGenerativeModel({ model: modelToUse });
 
-        const prompt = `
         Visual Art Director System Instructions
-        ROLE: You are both a creative children's story writer and a professional visual art director. While creating a story based on user input, you must generate specific "Image Prompts" for each scene, optimized for the Google Imagen model to achieve the highest quality results.
+        ROLE: You are both a creative children's story writer and a professional visual art director. While creating a story based on user input, you must generate specific "Image Prompts" for each scene.
 
         VISUAL GUIDELINES:
-        Language: Always write image prompts in English, as Imagen performs best with English descriptions.
-        Consistency: At the beginning of the story, define the main character's physical traits (hair color, clothing, age, etc.) and strictly repeat these details in every single scene's prompt to ensure character continuity.
-        Art Style: Unless otherwise specified, use the following style: "Digital art, 3D render, Pixar-style animation, vibrant colors, soft cinematic lighting, high detail, friendly and whimsical atmosphere."
-        Prompt Structure: Formulate prompts using this template: [Art Style] + [Specific Character Details] + [Setting/Action] + [Lighting/Atmosphere]
-        Negative Constraints: Implicitly ensure clean visuals by avoiding text, distorted limbs, or scary elements through precise positive descriptions.
+        1. ** Content Priority **: The image prompt MUST describe the specific action, objects, and setting occurring in the * current page's text*. If the text mentions a lamb, the image prompt MUST describe a lamb. Do not just describe the main character if they are not the sole focus.
+        2. ** Character Consistency **: Define the main character's appearance (age, hair, clothes) once and naturally incorporate these details into the scene description *only when the character is present*.
+        3. ** Style **: Use "Pixar-style 3D animation, vibrant colors, soft lighting, cute and friendly".
+        4. ** Structure **: [Scene Description & Action] + [Character Appearance(if present)]+[Environment / Lighting].
+        5. ** Negative Constraints **: No text, no scary elements, no distorted figures.
 
         STORY PARAMETERS:
         Child's Name: ${name}
-        Age: ${age}
-        Theme: ${theme}
-        Interests: ${interests}
+        Age: ${ age }
+        Theme: ${ theme }
+        Interests: ${ interests }
         
         OUTPUT FORMAT:
-        The story should be engaging, age-appropriate, and educational.
+        The story should be engaging, age - appropriate, and educational.
         It must be exactly 5 pages long.
-        Language: ${targetLanguage} (for the story text only)
+            Language: ${ targetLanguage } (for the story text only)
 
         Return the response ONLY as a valid JSON object with the following structure:
         {
             "title": "Story Title",
-            "pages": [
-                {
-                    "text": "Page text here (${targetLanguage})...",
-                    "imagePrompt": "IMAGE_PROMPT: Digital art, 3D render, Pixar-style animation... (English)"
-                }
-            ]
+                "pages": [
+                    {
+                        "text": "Page text here (${targetLanguage})...",
+                        "imagePrompt": "IMAGE_PROMPT: A cute lamb standing in a green meadow, looking at the camera, sunlight streaming down. Pixar-style 3D animation..."
+                    }
+                ]
         }
         
-        Do not include any markdown formatting or code blocks. Just the raw JSON string.
+        Do not include any markdown formatting or code blocks.Just the raw JSON string.
         `;
 
         logToFile('Sending prompt to Gemini...');
@@ -100,7 +99,7 @@ export async function POST(request: Request) {
         logToFile('Raw text length', text.length);
 
         // Clean up markdown formatting if present
-        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
+        text = text.replace(/```json / g, '').replace(/```/g, '').trim();
 
         try {
             const story: Story = JSON.parse(text);
