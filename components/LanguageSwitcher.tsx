@@ -19,23 +19,25 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className="absolute top-4 right-4 z-50">
-            <select
-                defaultValue={locale}
-                className="bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 [&>option]:text-black"
-                onChange={onSelectChange}
-                disabled={isPending}
-            >
-                <option value="en">English</option>
-                <option value="tr">Türkçe</option>
-                <option value="fr">Français</option>
-                <option value="de">Deutsch</option>
-                <option value="es">Español</option>
-                <option value="it">Italiano</option>
-                <option value="zh">中文</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-            </select>
+        <div className="z-50 w-full flex justify-end mb-4 md:absolute md:top-4 md:right-4 md:w-auto md:mb-0 pointer-events-none md:pointer-events-auto">
+            <div className="pointer-events-auto">
+                <select
+                    defaultValue={locale}
+                    className="bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 [&>option]:text-black"
+                    onChange={onSelectChange}
+                    disabled={isPending}
+                >
+                    <option value="en">English</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="zh">中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                </select>
+            </div>
         </div>
     );
 }
