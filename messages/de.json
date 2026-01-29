@@ -1,0 +1,33 @@
+{
+    "HomePage": {
+        "title": "Personalisierte KI-Geschichten",
+        "subTitle": "Kişiselleştirilmiş Masallar",
+        "description": "Erstellen Sie magische, personalisierte Geschichten, in denen Ihr Kind der Held ist!",
+        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "heroNameLabel": "Name des Helden",
+        "heroNamePlaceholder": "z.B. Kai",
+        "ageLabel": "Alter",
+        "agePlaceholder": "z.B. 5",
+        "interestsLabel": "Interessen",
+        "interestsPlaceholder": "z.B. Dinosaurier, Weltraum, Fußball",
+        "themeLabel": "Geschichtsumgebung",
+        "themes": {
+            "macera": "🌳 Abenteuerwald",
+            "uzay": "🚀 Unendlicher Weltraum",
+            "deniz": "🌊 Tiefes Meer",
+            "okul": "🏫 Zauberschule",
+            "sehir": "🏙️ Bunte Stadt",
+            "sato": "🏰 Prinzessinnenschloss",
+            "superkahraman": "⚡ Superheldenbasis",
+            "ada": "🏝️ Geheimnisvolle Insel",
+            "ciftlik": "🚜 Bauernhofleben",
+            "lunapark": "🎡 Vergnügungspark",
+            "kar": "❄️ Verschneite Berge",
+            "oyuncak": "🧸 Spielzeugfabrik",
+            "seker": "🍬 Süßigkeitenland"
+        },
+        "generateButton": "Geschichte Erstellen",
+        "generating": "Magie wird gebraut...",
+        "footer": "Geschichten, die zusammen mit Ihrem Kind erstellt wurden ✨"
+    }
+}

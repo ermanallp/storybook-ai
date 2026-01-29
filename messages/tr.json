@@ -1,0 +1,45 @@
+{
+    "HomePage": {
+        "title": "Kişiselleştirilmiş Masallar",
+        "subTitle": "Personalized AI Stories",
+        "description": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "descriptionSub": "Create magical AI bedtime stories in seconds.",
+        "heroNameLabel": "Kahramanın Adı",
+        "heroNamePlaceholder": "Örn: Kai",
+        "ageLabel": "Yaşı",
+        "agePlaceholder": "Örn: 5",
+        "interestsLabel": "İlgi Alanları",
+        "interestsPlaceholder": "Örn: Dinozorlar, Uzay, Futbol",
+        "themeLabel": "Hikaye Ortamı",
+        "themes": {
+            "macera": "🌳 Macera Dolu Orman",
+            "uzay": "🚀 Sonsuz Uzay",
+            "deniz": "🌊 Derin Denizler",
+            "okul": "🏫 Sihirli Okul",
+            "sehir": "🏙️ Renkli Şehir",
+            "sato": "🏰 Prenses Şatosu",
+            "superkahraman": "⚡ Süper Kahraman Üssü",
+            "ada": "🏝️ Gizemli Ada",
+            "ciftlik": "🚜 Çiftlik Hayatı",
+            "lunapark": "🎡 Lunapark Eğlencesi",
+            "kar": "❄️ Karlı Dağlar",
+            "oyuncak": "🧸 Oyuncak Fabrikası",
+            "seker": "🍬 Şeker Ülkesi"
+        },
+        "generateButton": "Hikayeyi Yarat",
+        "generating": "Sihir Hazırlanıyor...",
+        "footer": "Hikayeler Çocuğunuz ile Beraber Yaratılsın ✨"
+    },
+    "GeneratePage": {
+        "status_generating": "Hikayen yazılıyor...",
+        "status_magic": "{name} için sihirli bir dünya yaratılıyor...",
+        "status_images": "Resimler hazırlanıyor...",
+        "status_ready": "Hikayen hazır! Keyifli okumalar...",
+        "error_generic": "Bir hata oluştu. Lütfen tekrar dene."
+    },
+    "ReadPage": {
+        "loading_image": "Resim çiziliyor...",
+        "prev": "Önceki",
+        "next": "Sonraki"
+    }
+}

@@ -1,14 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '../../../../navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Home, BookOpen } from 'lucide-react';
 import { Story } from '@/types';
 import { getStory } from '@/app/lib/storage';
+import { useTranslations } from 'next-intl';
 
 export default function ReadStory() {
     const router = useRouter();
+    const t = useTranslations('ReadPage');
     const [story, setStory] = useState<Story | null>(null);
     const [currentPage, setCurrentPage] = useState(0);
     const [images, setImages] = useState<Record<number, string>>({});
@@ -129,7 +131,7 @@ export default function ReadStory() {
                                     {!loadedImages.has(currentPage) && (
                                         <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-gray-100">
                                             <div className="w-20 h-20 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mb-4"></div>
-                                            <p className="text-amber-700 font-serif text-lg">Resim çiziliyor...</p>
+                                            <p className="text-amber-700 font-serif text-lg">{t('loading_image')}</p>
                                             <p className="text-amber-600/60 text-sm mt-2 max-w-xs">{story.pages[currentPage].imagePrompt}</p>
                                         </div>
                                     )}
@@ -137,7 +139,7 @@ export default function ReadStory() {
                             ) : (
                                 <div className="flex flex-col items-center justify-center p-8 text-center">
                                     <div className="w-20 h-20 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mb-4"></div>
-                                    <p className="text-amber-700 font-serif text-lg">Resim çiziliyor...</p>
+                                    <p className="text-amber-700 font-serif text-lg">{t('loading_image')}</p>
                                     <p className="text-amber-600/60 text-sm mt-2 max-w-xs">{story.pages[currentPage].imagePrompt}</p>
                                 </div>
                             )}
@@ -182,7 +184,7 @@ export default function ReadStory() {
                                 }`}
                         >
                             <ChevronLeft size={20} />
-                            <span>Önceki</span>
+                            <span>{t('prev')}</span>
                         </button>
 
                         <div className="text-gray-400 font-serif text-sm">
@@ -197,7 +199,7 @@ export default function ReadStory() {
                                 : 'text-amber-800 hover:bg-amber-100'
                                 }`}
                         >
-                            <span>Sonraki</span>
+                            <span>{t('next')}</span>
                             <ChevronRight size={20} />
                         </button>
                     </div>

@@ -17,13 +17,26 @@ function logToFile(message: string, data?: any) {
     }
 }
 
+const LANGUAGE_MAP: Record<string, string> = {
+    'en': 'English',
+    'tr': 'Turkish',
+    'fr': 'French',
+    'de': 'German',
+    'es': 'Spanish',
+    'it': 'Italian',
+    'zh': 'Chinese (Simplified)',
+    'ja': 'Japanese',
+    'ko': 'Korean'
+};
+
 export async function POST(request: Request) {
     logToFile('Story generation API called');
     try {
         const body = await request.json(); // Don't type assert yet to be safe
         logToFile('Request body received', body);
 
-        const { name, age, interests, theme } = body;
+        const { name, age, interests, theme, locale = 'en' } = body;
+        const targetLanguage = LANGUAGE_MAP[locale] || 'English';
 
         const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
         logToFile('API Key check', { exists: !!apiKey });
@@ -37,15 +50,7 @@ export async function POST(request: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        // Trying a specific known model, or stick to pro
-        // Actually, let's try gemini-1.5-flash which SHOULD work, or fallback to pro.
-        // User feedback suggested 404 on flash-001.
-        // Let's try 'gemini-1.5-flash' again but maybe the issue was transient or key-related?
-        // Let's go with 'gemini-pro' as it was the last "safe" attempt, but user said it failed?
-        // Wait, user said "Errors dropped to 2" then "Up to 3".
-        // Let's log 'gemini-1.5-flash' to see the REAL error in the log file.
-        // Switching to 'gemini-flash-latest' as it was explicitly in the available list
-        const modelToUse = 'gemini-flash-latest';
+        const modelToUse = 'gemini-2.0-flash';
         logToFile(`Initializing model: ${modelToUse}`);
 
         const model = genAI.getGenerativeModel({ model: modelToUse });
@@ -70,14 +75,14 @@ export async function POST(request: Request) {
         OUTPUT FORMAT:
         The story should be engaging, age-appropriate, and educational.
         It must be exactly 5 pages long.
-        Language: Turkish (for the story text only)
+        Language: ${targetLanguage} (for the story text only)
 
         Return the response ONLY as a valid JSON object with the following structure:
         {
             "title": "Story Title",
             "pages": [
                 {
-                    "text": "Page text here (Turkish)...",
+                    "text": "Page text here (${targetLanguage})...",
                     "imagePrompt": "IMAGE_PROMPT: Digital art, 3D render, Pixar-style animation... (English)"
                 }
             ]

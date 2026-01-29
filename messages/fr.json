@@ -1,0 +1,33 @@
+{
+    "HomePage": {
+        "title": "Histoires IA Personnalisées",
+        "subTitle": "Kişiselleştirilmiş Masallar",
+        "description": "Créez des histoires magiques personnalisées où votre enfant est le héros !",
+        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "heroNameLabel": "Nom du Héros",
+        "heroNamePlaceholder": "ex: Kai",
+        "ageLabel": "Âge",
+        "agePlaceholder": "ex: 5",
+        "interestsLabel": "Intérêts",
+        "interestsPlaceholder": "ex: Dinosaures, Espace, Football",
+        "themeLabel": "Cadre de l'Histoire",
+        "themes": {
+            "macera": "🌳 Forêt d'Aventure",
+            "uzay": "🚀 Espace Infini",
+            "deniz": "🌊 Mer Profonde",
+            "okul": "🏫 École Magique",
+            "sehir": "🏙️ Ville Colorée",
+            "sato": "🏰 Château de Princesse",
+            "superkahraman": "⚡ Base de Super-héros",
+            "ada": "🏝️ Île Mystérieuse",
+            "ciftlik": "🚜 Vie à la Ferme",
+            "lunapark": "🎡 Parc d'Attractions",
+            "kar": "❄️ Montagnes Enneigées",
+            "oyuncak": "🧸 Usine de Jouets",
+            "seker": "🍬 Pays des Bonbons"
+        },
+        "generateButton": "Créer l'Histoire",
+        "generating": "La magie opère...",
+        "footer": "Histoires créées ensemble avec votre enfant ✨"
+    }
+}

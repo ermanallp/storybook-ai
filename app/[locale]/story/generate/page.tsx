@@ -1,16 +1,20 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+import { useRouter } from '../../../../navigation';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { Story } from '@/types';
 import { saveStory } from '@/app/lib/storage';
+import { useLocale, useTranslations } from 'next-intl';
 
 function GenerateStoryContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
-    const [status, setStatus] = useState('Hikayen yazılıyor...');
+    const t = useTranslations('GeneratePage');
+    const locale = useLocale();
+    const [status, setStatus] = useState(t('status_generating'));
 
     useEffect(() => {
         const generate = async () => {
@@ -25,25 +29,25 @@ function GenerateStoryContent() {
             }
 
             try {
-                setStatus(`${name} için sihirli bir dünya yaratılıyor...`);
+                setStatus(t('status_magic', { name }));
 
                 const response = await fetch('/api/generate-story', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, age, interests, theme }),
+                    body: JSON.stringify({ name, age, interests, theme, locale }),
                 });
 
                 if (!response.ok) {
+                    const errorText = await response.text();
                     let errorData;
                     try {
-                        errorData = await response.json();
+                        errorData = JSON.parse(errorText);
                     } catch (e) {
-                        const errorText = await response.text();
                         console.error('Server Error (Non-JSON):', errorText);
                         throw new Error(`Server Error: ${response.status} ${response.statusText}`);
                     }
                     console.error('Server Error Details:', errorData);
-                    throw new Error(errorData.details || errorData.error || 'Hikaye oluşturulamadı');
+                    throw new Error(errorData.details || errorData.error || t('error_generic'));
                 }
 
                 const story: Story = await response.json();
@@ -51,7 +55,7 @@ function GenerateStoryContent() {
                 // Save initial text-only story
                 await saveStory(story);
 
-                setStatus(`Resimler hazırlanıyor...`);
+                setStatus(t('status_images'));
 
                 // Process images in parallel
                 const imagePromises = story.pages.map(async (page, i) => {
@@ -86,7 +90,7 @@ function GenerateStoryContent() {
                 await saveStory(story);
 
 
-                setStatus('Hikayen hazır! Keyifli okumalar...');
+                setStatus(t('status_ready'));
                 // Short delay to let user see completion message
                 setTimeout(() => {
                     router.push('/story/read');
@@ -94,13 +98,13 @@ function GenerateStoryContent() {
 
             } catch (error) {
                 console.error(error);
-                setStatus('Bir hata oluştu. Lütfen tekrar dene.');
+                setStatus(t('error_generic'));
                 setTimeout(() => router.push('/'), 3000);
             }
         };
 
         generate();
-    }, [searchParams, router]);
+    }, [searchParams, router, t, locale]);
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-purple-500 to-blue-600 flex flex-col items-center justify-center text-white p-4">

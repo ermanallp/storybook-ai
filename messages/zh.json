@@ -1,0 +1,33 @@
+{
+    "HomePage": {
+        "title": "个性化 AI 故事",
+        "subTitle": "Kişiselleştirilmiş Masallar",
+        "description": "创造神奇的个性化 AI 故事，让你的孩子成为英雄！",
+        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "heroNameLabel": "英雄的名字",
+        "heroNamePlaceholder": "例如：阿里",
+        "ageLabel": "年龄",
+        "agePlaceholder": "例如：5",
+        "interestsLabel": "兴趣",
+        "interestsPlaceholder": "例如：恐龙，太空，足球",
+        "themeLabel": "故事背景",
+        "themes": {
+            "macera": "🌳 冒险森林",
+            "uzay": "🚀 无尽太空",
+            "deniz": "🌊 深海",
+            "okul": "🏫 魔法学校",
+            "sehir": "🏙️ 多彩城市",
+            "sato": "🏰 公主城堡",
+            "superkahraman": "⚡ 超级英雄基地",
+            "ada": "🏝️ 神秘岛屿",
+            "ciftlik": "🚜 农场生活",
+            "lunapark": "🎡 游乐园",
+            "kar": "❄️ 雪山",
+            "oyuncak": "🧸 玩具工厂",
+            "seker": "🍬 糖果乐园"
+        },
+        "generateButton": "生成故事",
+        "generating": "正在施展魔法...",
+        "footer": "与您的孩子一起创作故事 ✨"
+    }
+}

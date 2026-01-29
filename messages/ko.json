@@ -1,0 +1,33 @@
+{
+    "HomePage": {
+        "title": "개인 맞춤형 AI 이야기",
+        "subTitle": "Kişiselleştirilmiş Masallar",
+        "description": "아이가 주인공이 되는 마법 같은 맞춤형 AI 이야기를 만들어보세요!",
+        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "heroNameLabel": "주인공 이름",
+        "heroNamePlaceholder": "예: 알리",
+        "ageLabel": "나이",
+        "agePlaceholder": "예: 5",
+        "interestsLabel": "관심사",
+        "interestsPlaceholder": "예: 공룡, 우주, 축구",
+        "themeLabel": "이야기 배경",
+        "themes": {
+            "macera": "🌳 모험의 숲",
+            "uzay": "🚀 끝없는 우주",
+            "deniz": "🌊 깊은 바다",
+            "okul": "🏫 마법 학교",
+            "sehir": "🏙️ 다채로운 도시",
+            "sato": "🏰 공주 성",
+            "superkahraman": "⚡ 슈퍼히어로 기지",
+            "ada": "🏝️ 신비한 섬",
+            "ciftlik": "🚜 농장 생활",
+            "lunapark": "🎡 놀이공원",
+            "kar": "❄️ 눈 덮인 산",
+            "oyuncak": "🧸 장난감 공장",
+            "seker": "🍬 사탕 나라"
+        },
+        "generateButton": "이야기 만들기",
+        "generating": "마법을 부리는 중...",
+        "footer": "아이와 함께 이야기를 만들어보세요 ✨"
+    }
+}

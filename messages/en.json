@@ -1,0 +1,45 @@
+{
+  "HomePage": {
+    "title": "Personalized AI Stories",
+    "subTitle": "Kişiselleştirilmiş Masallar",
+    "description": "Create magical, personalized AI stories where your child is the hero!",
+    "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+    "heroNameLabel": "Hero's Name",
+    "heroNamePlaceholder": "e.g. Kai",
+    "ageLabel": "Age",
+    "agePlaceholder": "e.g. 5",
+    "interestsLabel": "Interests",
+    "interestsPlaceholder": "e.g. Dinosaurs, Space, Football",
+    "themeLabel": "Story Setting",
+    "themes": {
+      "macera": "🌳 Adventure Forest",
+      "uzay": "🚀 Infinite Space",
+      "deniz": "🌊 Deep Blue Sea",
+      "okul": "🏫 Magic School",
+      "sehir": "🏙️ Colorful City",
+      "sato": "🏰 Princess Castle",
+      "superkahraman": "⚡ Superhero Base",
+      "ada": "🏝️ Mystery Island",
+      "ciftlik": "🚜 Farm Life",
+      "lunapark": "🎡 Amusement Park",
+      "kar": "❄️ Snowy Mountains",
+      "oyuncak": "🧸 Toy Factory",
+      "seker": "🍬 Candy Land"
+    },
+    "generateButton": "Create Story",
+    "generating": "Magic is brewing...",
+    "footer": "Stories created together with your child ✨"
+  },
+  "GeneratePage": {
+    "status_generating": "Writing your story...",
+    "status_magic": "Creating a magic world for {name}...",
+    "status_images": "Preparing images...",
+    "status_ready": "Your story is ready! Enjoy reading...",
+    "error_generic": "An error occurred. Please try again."
+  },
+  "ReadPage": {
+    "loading_image": "Painting the picture...",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}
