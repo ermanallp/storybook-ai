@@ -55,39 +55,41 @@ export async function POST(request: Request) {
 
         const model = genAI.getGenerativeModel({ model: modelToUse });
 
+        const prompt = `
         Visual Art Director System Instructions
-        ROLE: You are both a creative children's story writer and a professional visual art director. While creating a story based on user input, you must generate specific "Image Prompts" for each scene.
+        ROLE: You are a professional children's book illustrator and writer. 
+        
+        CRITICAL GOAL: You must maintain PERFECT CHARACTER CONSISTENCY while generating unique scenes.
 
-        VISUAL GUIDELINES:
-        1. ** Content Priority **: The image prompt MUST describe the specific action, objects, and setting occurring in the * current page's text*. If the text mentions a lamb, the image prompt MUST describe a lamb. Do not just describe the main character if they are not the sole focus.
-        2. ** Character Consistency **: Define the main character's appearance (age, hair, clothes) once and naturally incorporate these details into the scene description *only when the character is present*.
-        3. ** Style **: Use "Pixar-style 3D animation, vibrant colors, soft lighting, cute and friendly".
-        4. ** Structure **: [Scene Description & Action] + [Character Appearance(if present)]+[Environment / Lighting].
-        5. ** Negative Constraints **: No text, no scary elements, no distorted figures.
+        1. **Define the Character**: First, create a short, distinctive description of the main character (e.g., "A 5-year-old girl with curly red hair, blue overalls, and a star patch").
+        2. **Generate Image Prompts**: For EACH scene, you must combine the *fixed character description* with the *current scene action*.
+        
+        STRICT PROMPT TEMPLATE:
+        "[Pixar-style 3D animation] + [Fixed Character Description] doing [Specific Scene Action] in [Setting/Lighting]."
+
+        RULES:
+        - NEVER change the character's core features (hair, clothes, age).
+        - ALWAYS describe the specific action/object happening in the current page (e.g., if page says "she found a key", prompt must say "holding a golden key").
+        - If the character is NOT in the scene (rare), strictly describe the scene objects.
 
         STORY PARAMETERS:
         Child's Name: ${name}
-        Age: ${ age }
-        Theme: ${ theme }
-        Interests: ${ interests }
+        Age: ${age}
+        Theme: ${theme}
+        Interests: ${interests}
         
-        OUTPUT FORMAT:
-        The story should be engaging, age - appropriate, and educational.
-        It must be exactly 5 pages long.
-            Language: ${ targetLanguage } (for the story text only)
-
-        Return the response ONLY as a valid JSON object with the following structure:
+        OUTPUT FORMAT (JSON ONLY):
         {
             "title": "Story Title",
-                "pages": [
-                    {
-                        "text": "Page text here (${targetLanguage})...",
-                        "imagePrompt": "IMAGE_PROMPT: A cute lamb standing in a green meadow, looking at the camera, sunlight streaming down. Pixar-style 3D animation..."
-                    }
-                ]
+            "pages": [
+                {
+                    "text": "Page text here...",
+                    "imagePrompt": "IMAGE_PROMPT: Pixar-style 3D animation. A 5-year-old girl with curly red hair and blue overalls holding a glowing golden key in a dark mysterious cave. Soft blue lighting."
+                }
+            ]
         }
         
-        Do not include any markdown formatting or code blocks.Just the raw JSON string.
+        Return ONLY valid JSON. No markdown.
         `;
 
         logToFile('Sending prompt to Gemini...');
@@ -99,7 +101,7 @@ export async function POST(request: Request) {
         logToFile('Raw text length', text.length);
 
         // Clean up markdown formatting if present
-        text = text.replace(/```json / g, '').replace(/```/g, '').trim();
+        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
 
         try {
             const story: Story = JSON.parse(text);
