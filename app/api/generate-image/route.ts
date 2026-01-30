@@ -14,10 +14,12 @@ export async function POST(request: Request) {
         }
 
         // Use Google Gemini (Imagen 4 Fast) via REST API
-        // Model: imagen-4.0-fast-generate-001
+        // Model: imagen-4.0-fast-generate-001 for better speed/quota
+        // We rely on the strong "Pixar style" prompt to maintain quality even on the fast model
         const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict?key=${apiKey}`;
 
-        const stylePrompt = `cartoon style, children's book illustration, vibrant colors, cute, high quality, ${prompt}`;
+        // The prompt already contains the style instructions from the story generator
+        const stylePrompt = prompt;
 
         const response = await fetch(url, {
             method: 'POST',

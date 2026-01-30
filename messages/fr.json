@@ -29,5 +29,17 @@
         "generateButton": "Créer l'Histoire",
         "generating": "La magie opère...",
         "footer": "Histoires créées ensemble avec votre enfant ✨"
+    },
+    "GeneratePage": {
+        "status_generating": "Écriture de votre histoire...",
+        "status_magic": "Création d'un monde magique pour {name}...",
+        "status_images": "Préparation des images...",
+        "status_ready": "Votre histoire est prête ! Bonne lecture...",
+        "error_generic": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "ReadPage": {
+        "loading_image": "Peinture de l'image...",
+        "prev": "Précédent",
+        "next": "Suivant"
     }
 }

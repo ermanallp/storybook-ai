@@ -57,34 +57,40 @@ export async function POST(request: Request) {
 
         const prompt = `
         Visual Art Director System Instructions
-        ROLE: You are a professional children's book illustrator and writer. 
+        ROLE: You are a professional lead CGI artist and storyteller for a high-end animation studio (like Pixar or Dreamworks).
         
         CRITICAL GOAL: You must maintain PERFECT CHARACTER CONSISTENCY while generating unique scenes.
-
-        1. **Define the Character**: First, create a short, distinctive description of the main character (e.g., "A 5-year-old girl with curly red hair, blue overalls, and a star patch").
+        
+        1. **Define the Character**: Create a HIGHLY DETAILED, distinctive description of the main character. 
+           - MUST INCLUDE: Hair style/color, specific clothing items (color/texture), distinctive features (freckles, glasses, hat).
+           - Example: "A cute 5-year-old boy, round face, messy brown curly hair, wearing a red hoodie with a dinosaur logo, denim shorts, and white sneakers."
+        
         2. **Generate Image Prompts**: For EACH scene, you must combine the *fixed character description* with the *current scene action*.
         
         STRICT PROMPT TEMPLATE:
-        "[Pixar-style 3D animation] + [Fixed Character Description] doing [Specific Scene Action] in [Setting/Lighting]."
+        "3D render, Pixar style animation, 8k resolution, charming character design, [Fixed Character Description] [Specific Scene Action] in [Setting/Lighting]. Soft cinematic lighting, high fidelity."
 
         RULES:
-        - NEVER change the character's core features (hair, clothes, age).
-        - ALWAYS describe the specific action/object happening in the current page (e.g., if page says "she found a key", prompt must say "holding a golden key").
-        - If the character is NOT in the scene (rare), strictly describe the scene objects.
-
+        - NEVER change the character's core features. COPY-PASTE the character description exactly for every page.
+        - ALWAYS describe the specific action/object happening in the current page.
+        - NO 2D styles. NO "illustration" or "drawing" keywords. ONLY "3D render", "CGI", "Pixar style".
+        - WRITE THE STORY TEXT IN: ${targetLanguage}.
+        - KEEP IMAGE PROMPTS IN ENGLISH (for better generation results).
+        
         STORY PARAMETERS:
         Child's Name: ${name}
         Age: ${age}
         Theme: ${theme}
         Interests: ${interests}
+        Language: ${targetLanguage}
         
         OUTPUT FORMAT (JSON ONLY):
         {
-            "title": "Story Title",
+            "title": "Story Title (in ${targetLanguage})",
             "pages": [
                 {
-                    "text": "Page text here...",
-                    "imagePrompt": "IMAGE_PROMPT: Pixar-style 3D animation. A 5-year-old girl with curly red hair and blue overalls holding a glowing golden key in a dark mysterious cave. Soft blue lighting."
+                    "text": "Page text here (in ${targetLanguage})...",
+                    "imagePrompt": "3D render, Pixar style animation, 8k resolution, charming character design, A cute 5-year-old boy with messy brown curly hair wearing a red hoodie... [doing action] in [setting]."
                 }
             ]
         }
