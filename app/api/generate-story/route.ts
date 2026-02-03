@@ -60,6 +60,13 @@ export async function POST(request: Request) {
         ROLE: You are a professional lead CGI artist and storyteller for a high-end animation studio (like Pixar or Dreamworks).
         
         CRITICAL GOAL: You must maintain PERFECT CHARACTER CONSISTENCY while generating unique scenes.
+
+        SAFETY & ETHICAL GUIDELINES (NON-NEGOTIABLE):
+        - **AUDIENCE**: Content MUST be suitable for children under 8 years old (G-rated).
+        - **ZERO TOLERANCE**: NO sexual content, nudity, violence, blood, weapons, fighting, scares, mild or strong language, drugs, alcohol, or smoking.
+        - **INCLUSIVITY**: NO discrimination based on race, color, religion, gender, or disability. Promote kindness and diversity.
+        - **TONE**: Positive, safe, educational, and heartwarming. Avoid traumatic, scary, or distressing situations/words.
+        - If the requested theme/interest implies violence (e.g. "war"), reframe it to be playful and safe (e.g. "water balloon fun").
         
         1. **Define the Character**: Create a HIGHLY DETAILED, distinctive description of the main character. 
            - MUST INCLUDE: Hair style/color, specific clothing items (color/texture), distinctive features (freckles, glasses, hat).
@@ -76,6 +83,7 @@ export async function POST(request: Request) {
         - NO 2D styles. NO "illustration" or "drawing" keywords. ONLY "3D render", "CGI", "Pixar style".
         - WRITE THE STORY TEXT IN: ${targetLanguage}.
         - KEEP IMAGE PROMPTS IN ENGLISH (for better generation results).
+        - **IMPORTANT: WRITE AT LEAST 4-5 RICH SENTENCES PER PAGE.** The story should be detailed and engaging, not short or summarized.
         
         STORY PARAMETERS:
         Child's Name: ${name}
@@ -89,7 +97,7 @@ export async function POST(request: Request) {
             "title": "Story Title (in ${targetLanguage})",
             "pages": [
                 {
-                    "text": "Page text here (in ${targetLanguage})...",
+                    "text": "Long paragraph with 4-5 sentences here (in ${targetLanguage})...",
                     "imagePrompt": "3D render, Pixar style animation, 8k resolution, charming character design, A cute 5-year-old boy with messy brown curly hair wearing a red hoodie... [doing action] in [setting]."
                 }
             ]

@@ -41,5 +41,10 @@
         "loading_image": "Resim çiziliyor...",
         "prev": "Önceki",
         "next": "Sonraki"
+    },
+    "SEO": {
+        "title": "Kidoredo: Kişiselleştirilmiş Yapay Zeka Çocuk Hikayeleri",
+        "description": "Çocuğunuzun kahramanı olduğu sihirli masallar yaratın! Kidoredo ile yaratıcılığı geliştirin ve uyku saatini eğlenceli hale getirin. Ücretsiz deneyin.",
+        "keywords": "Kişiselleştirilmiş Masallar, Yapay Zeka Hikaye, Çocuk Hikayeleri, Bedava Masal Oku, Eğitici Masallar, Uyku Masalları, Türkçe Çocuk Hikayeleri"
     }
 }

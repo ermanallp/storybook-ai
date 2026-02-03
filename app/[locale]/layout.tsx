@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 const geistSans = Geist({
@@ -16,22 +16,49 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Kidoredo: Personalized AI Bedtime Stories for Kids",
-    template: "%s | Kidoredo"
-  },
-  description: "Create magical, personalized AI stories where your child is the hero! Boost creativity and make bedtime fun with Kidoredo's custom books. Try for free.",
-  keywords: ["Personalized AI Stories", "Custom Kids Books", "AI Bedtime Stories", "AI Story Generator", "Kişiselleştirilmiş Masallar", "Yapay Zeka Hikaye"],
-  authors: [{ name: "Kidoredo Team" }],
-  openGraph: {
-    title: "Kidoredo: Personalized AI Bedtime Stories",
-    description: "Make your child the hero of their own magical story.",
-    type: "website",
-    locale: "en_US",
-    siteName: "Kidoredo",
-  },
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'SEO' });
+
+  // Base URL for alternates using proper environment variable or fallback
+  // Assuming production URL is https://kidoredo.com based on existing code context
+  const baseUrl = 'https://kidoredo.com';
+
+  return {
+    title: {
+      default: t('title'),
+      template: "%s | Kidoredo"
+    },
+    description: t('description'),
+    keywords: t('keywords').split(',').map(k => k.trim()),
+    authors: [{ name: "Kidoredo Team" }],
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: "website",
+      locale: locale === 'tr' ? 'tr_TR' : 'en_US', // Basic mapping, can be expanded
+      siteName: "Kidoredo",
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        'en': `${baseUrl}/en`,
+        'tr': `${baseUrl}/tr`,
+        'fr': `${baseUrl}/fr`,
+        'de': `${baseUrl}/de`,
+        'es': `${baseUrl}/es`,
+        'it': `${baseUrl}/it`,
+        'zh': `${baseUrl}/zh`,
+        'ja': `${baseUrl}/ja`,
+        'ko': `${baseUrl}/ko`,
+      },
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
