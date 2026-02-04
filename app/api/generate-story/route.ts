@@ -59,7 +59,7 @@ export async function POST(request: Request) {
         Visual Art Director System Instructions
         ROLE: You are a professional lead CGI artist and storyteller for a high-end animation studio (like Pixar or Dreamworks).
         
-        CRITICAL GOAL: You must maintain PERFECT CHARACTER CONSISTENCY while generating unique scenes.
+        CRITICAL GOAL: You must maintain PERFECT CHARACTER CONSISTENCY.
 
         SAFETY & ETHICAL GUIDELINES (NON-NEGOTIABLE):
         - **AUDIENCE**: Content MUST be suitable for children under 8 years old (G-rated).
@@ -70,20 +70,12 @@ export async function POST(request: Request) {
         
         1. **Define the Character**: Create a HIGHLY DETAILED, distinctive description of the main character. 
            - MUST INCLUDE: Hair style/color, specific clothing items (color/texture), distinctive features (freckles, glasses, hat).
+           - This description will be used programmatically for every image, so make it comprehensive.
            - Example: "A cute 5-year-old boy, round face, messy brown curly hair, wearing a red hoodie with a dinosaur logo, denim shorts, and white sneakers."
         
-        2. **Generate Image Prompts**: For EACH scene, you must combine the *fixed character description* with the *current scene action*.
-        
-        STRICT PROMPT TEMPLATE:
-        "3D render, Pixar style animation, 8k resolution, charming character design, [Fixed Character Description] [Specific Scene Action] in [Setting/Lighting]. Soft cinematic lighting, high fidelity."
-
-        RULES:
-        - NEVER change the character's core features. COPY-PASTE the character description exactly for every page.
-        - ALWAYS describe the specific action/object happening in the current page.
-        - NO 2D styles. NO "illustration" or "drawing" keywords. ONLY "3D render", "CGI", "Pixar style".
-        - WRITE THE STORY TEXT IN: ${targetLanguage}.
-        - KEEP IMAGE PROMPTS IN ENGLISH (for better generation results).
-        - **IMPORTANT: WRITE AT LEAST 4-5 RICH SENTENCES PER PAGE.** The story should be detailed and engaging, not short or summarized.
+        2. **Storytelling**: Write a heartwarming story based on the inputs.
+           - WRITE THE STORY TEXT IN: ${targetLanguage}.
+           - WRITE AT LEAST 4-5 RICH SENTENCES PER PAGE.
         
         STORY PARAMETERS:
         Child's Name: ${name}
@@ -95,10 +87,11 @@ export async function POST(request: Request) {
         OUTPUT FORMAT (JSON ONLY):
         {
             "title": "Story Title (in ${targetLanguage})",
+            "characterDescription": "The full detailed character description in English",
             "pages": [
                 {
                     "text": "Long paragraph with 4-5 sentences here (in ${targetLanguage})...",
-                    "imagePrompt": "3D render, Pixar style animation, 8k resolution, charming character design, A cute 5-year-old boy with messy brown curly hair wearing a red hoodie... [doing action] in [setting]."
+                    "sceneAction": "Specific action and setting description for this page in English (e.g. 'laughing while swinging on a swing set in a sunny park with tall trees'). Do NOT describe the character traits again, just the action and environment."
                 }
             ]
         }
@@ -118,8 +111,34 @@ export async function POST(request: Request) {
         text = text.replace(/```json/g, '').replace(/```/g, '').trim();
 
         try {
-            const story: Story = JSON.parse(text);
-            return NextResponse.json(story);
+            const storyData = JSON.parse(text);
+
+            // Enforce Style and Consistency Programmatically
+            const STYLE_PREFIX = "3D render, Pixar style animation, 8k resolution, charming character design, ";
+            const STYLE_SUFFIX = ", soft cinematic lighting, high fidelity, 3d render, cgi, cartoon style";
+
+            const characterDesc = storyData.characterDescription || `A cute ${age} year old child`;
+
+            const processedPages = storyData.pages.map((page: any) => {
+                // Construct the full prompt: Style + Character + Action + Suffix
+                // We ensure the character description is always included exactly the same way.
+                const fullImagePrompt = `${STYLE_PREFIX}${characterDesc}, ${page.sceneAction} in the scene${STYLE_SUFFIX}`;
+
+                return {
+                    text: page.text,
+                    imagePrompt: fullImagePrompt,
+                    // We can keep sceneAction for potential debugging or display if needed, 
+                    // but the types interface expects imagePrompt to be present.
+                };
+            });
+
+            const finalStory: Story = {
+                title: storyData.title,
+                characterDescription: characterDesc,
+                pages: processedPages
+            };
+
+            return NextResponse.json(finalStory);
         } catch (parseError) {
             logToFile('JSON Parse Error', { text, error: String(parseError) });
             return new Response(JSON.stringify({ error: 'Failed to parse story JSON', raw: text }), {

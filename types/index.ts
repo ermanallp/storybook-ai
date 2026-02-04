@@ -6,6 +6,7 @@ export interface StoryPage {
 
 export interface Story {
     title: string;
+    characterDescription: string;
     pages: StoryPage[];
 }
 
