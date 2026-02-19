@@ -2,7 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+1.  **Environment Setup**:
+    Ensure you have a `.env.local` file with the following keys:
+    - `GEMINI_API_KEY`: Google Gemini API Key.
+    - `NEXT_PUBLIC_FIREBASE_API_KEY`, etc.: Firebase configuration keys.
+
+2.  **Run the development server**:
 
 ```bash
 npm run dev
@@ -16,9 +21,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Story Generation**: `app/[locale]/story/generate` (Protected Route)
+- **Authentication**: `app/[locale]/login` and `app/[locale]/signup`
+- **Analytics**: Google Analytics 4 and Google Tag Manager integrated.
 
 ## Learn More
 

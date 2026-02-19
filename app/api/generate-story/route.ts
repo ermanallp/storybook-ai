@@ -53,7 +53,12 @@ export async function POST(request: Request) {
         const modelToUse = 'gemini-2.0-flash';
         logToFile(`Initializing model: ${modelToUse}`);
 
-        const model = genAI.getGenerativeModel({ model: modelToUse });
+        const model = genAI.getGenerativeModel({
+            model: modelToUse,
+            generationConfig: {
+                responseMimeType: "application/json",
+            }
+        });
 
         const prompt = `
         Visual Art Director System Instructions
@@ -76,6 +81,7 @@ export async function POST(request: Request) {
         2. **Storytelling**: Write a heartwarming story based on the inputs.
            - WRITE THE STORY TEXT IN: ${targetLanguage}.
            - WRITE AT LEAST 4-5 RICH SENTENCES PER PAGE.
+           - **CRITICAL: The story MUST have exactly 7 distinct pages/segments.**
         
         STORY PARAMETERS:
         Child's Name: ${name}
@@ -92,11 +98,10 @@ export async function POST(request: Request) {
                 {
                     "text": "Long paragraph with 4-5 sentences here (in ${targetLanguage})...",
                     "sceneAction": "Specific action and setting description for this page in English (e.g. 'laughing while swinging on a swing set in a sunny park with tall trees'). Do NOT describe the character traits again, just the action and environment."
-                }
+                },
+                // ... exactly 7 page objects ...
             ]
         }
-        
-        Return ONLY valid JSON. No markdown.
         `;
 
         logToFile('Sending prompt to Gemini...');

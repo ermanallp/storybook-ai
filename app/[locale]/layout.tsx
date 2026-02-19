@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from "next/navigation";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,17 +88,17 @@ export default async function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N9W6VCBF');
+})(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
         `}
       </Script>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-KSGGY5JSKG" strategy="afterInteractive" />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-KSGGY5JSKG');
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
         `}
       </Script>
       <body
@@ -105,37 +106,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       >
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N9W6VCBF"
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
         <NextIntlClientProvider messages={messages}>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                "name": "Kidoredo",
-                "applicationCategory": "EducationalApplication",
-                "operatingSystem": "Web",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "USD"
-                },
-                "description": "Create magical, personalized AI stories where your child is the hero!",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "ratingCount": "120"
-                }
-              }),
-            }}
-          />
-          {children}
+          <AuthProvider>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "SoftwareApplication",
+                  "name": "Kidoredo",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                  },
+                  "description": "Create magical, personalized AI stories where your child is the hero!",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "120"
+                  }
+                }),
+              }}
+            />
+            {children}
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

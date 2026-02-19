@@ -1708,3 +1708,361 @@
 [2026-01-30T08:38:33.347Z] Raw text length 2709
 [2026-01-30T08:38:33.513Z] Gemini response received 
 [2026-01-30T08:38:33.514Z] Raw text length 2659
+[2026-02-18T07:55:41.027Z] Story generation API called 
+[2026-02-18T07:55:41.032Z] Request body received {
+  "name": "Erman",
+  "age": "4",
+  "interests": "snow ski",
+  "theme": "macera",
+  "locale": "en"
+}
+[2026-02-18T07:55:41.032Z] API Key check {
+  "exists": false
+}
+[2026-02-18T07:55:41.033Z] Error: API Key missing 
+[2026-02-18T07:55:41.044Z] Story generation API called 
+[2026-02-18T07:55:41.045Z] Request body received {
+  "name": "Erman",
+  "age": "4",
+  "interests": "snow ski",
+  "theme": "macera",
+  "locale": "en"
+}
+[2026-02-18T07:55:41.045Z] API Key check {
+  "exists": false
+}
+[2026-02-18T07:55:41.046Z] Error: API Key missing 
+[2026-02-18T08:47:59.229Z] Story generation API called 
+[2026-02-18T08:47:59.233Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "hiking",
+  "theme": "macera",
+  "locale": "en"
+}
+[2026-02-18T08:47:59.234Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:47:59.235Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:47:59.235Z] Sending prompt to Gemini... 
+[2026-02-18T08:47:59.242Z] Story generation API called 
+[2026-02-18T08:47:59.244Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "hiking",
+  "theme": "macera",
+  "locale": "en"
+}
+[2026-02-18T08:47:59.245Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:47:59.245Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:47:59.245Z] Sending prompt to Gemini... 
+[2026-02-18T08:48:03.970Z] Gemini response received 
+[2026-02-18T08:48:03.971Z] Raw text length 2564
+[2026-02-18T08:48:04.897Z] Gemini response received 
+[2026-02-18T08:48:04.898Z] Raw text length 3108
+[2026-02-18T08:48:50.741Z] Story generation API called 
+[2026-02-18T08:48:50.743Z] Request body received {
+  "name": "erman",
+  "age": "5",
+  "interests": "karda kayak yapmak",
+  "theme": "macera",
+  "locale": "tr"
+}
+[2026-02-18T08:48:50.743Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:48:50.744Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:48:50.746Z] Sending prompt to Gemini... 
+[2026-02-18T08:48:50.759Z] Story generation API called 
+[2026-02-18T08:48:50.762Z] Request body received {
+  "name": "erman",
+  "age": "5",
+  "interests": "karda kayak yapmak",
+  "theme": "macera",
+  "locale": "tr"
+}
+[2026-02-18T08:48:50.763Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:48:50.764Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:48:50.765Z] Sending prompt to Gemini... 
+[2026-02-18T08:48:56.605Z] Gemini response received 
+[2026-02-18T08:48:56.606Z] Raw text length 2568
+[2026-02-18T08:48:57.632Z] Gemini response received 
+[2026-02-18T08:48:57.632Z] Raw text length 2623
+[2026-02-18T08:51:32.542Z] Story generation API called 
+[2026-02-18T08:51:32.544Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "ninja turtles",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-18T08:51:32.545Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:51:32.546Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:51:32.547Z] Sending prompt to Gemini... 
+[2026-02-18T08:51:32.561Z] Story generation API called 
+[2026-02-18T08:51:32.563Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "ninja turtles",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-18T08:51:32.563Z] API Key check {
+  "exists": true
+}
+[2026-02-18T08:51:32.564Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T08:51:32.566Z] Sending prompt to Gemini... 
+[2026-02-18T08:51:39.013Z] Gemini response received 
+[2026-02-18T08:51:39.014Z] Raw text length 2614
+[2026-02-18T08:51:39.307Z] Gemini response received 
+[2026-02-18T08:51:39.308Z] Raw text length 2686
+[2026-02-18T09:52:08.221Z] Story generation API called 
+[2026-02-18T09:52:08.223Z] Request body received {
+  "name": "Admin",
+  "age": "3",
+  "interests": "sekerler",
+  "theme": "seker",
+  "locale": "tr"
+}
+[2026-02-18T09:52:08.225Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:52:08.227Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:52:08.229Z] Sending prompt to Gemini... 
+[2026-02-18T09:52:08.240Z] Story generation API called 
+[2026-02-18T09:52:08.243Z] Request body received {
+  "name": "Admin",
+  "age": "3",
+  "interests": "sekerler",
+  "theme": "seker",
+  "locale": "tr"
+}
+[2026-02-18T09:52:08.244Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:52:08.245Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:52:08.246Z] Sending prompt to Gemini... 
+[2026-02-18T09:52:13.316Z] Gemini response received 
+[2026-02-18T09:52:13.319Z] Raw text length 2073
+[2026-02-18T09:52:14.318Z] Gemini response received 
+[2026-02-18T09:52:14.321Z] Raw text length 2266
+[2026-02-18T09:56:46.150Z] Story generation API called 
+[2026-02-18T09:56:46.154Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "arabalar",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-18T09:56:46.156Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:56:46.158Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:56:46.158Z] Sending prompt to Gemini... 
+[2026-02-18T09:56:46.178Z] Story generation API called 
+[2026-02-18T09:56:46.180Z] Request body received {
+  "name": "erman",
+  "age": "4",
+  "interests": "arabalar",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-18T09:56:46.181Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:56:46.183Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:56:46.184Z] Sending prompt to Gemini... 
+[2026-02-18T09:56:53.591Z] Gemini response received 
+[2026-02-18T09:56:53.593Z] Raw text length 2861
+[2026-02-18T09:56:53.594Z] JSON Parse Error {
+  "text": "{\n  \"title\": \"Erman ve Şehirdeki Arabalar\",\n  \"characterDescription\": \"A cheerful 4-year-old boy named Erman, with bright blue eyes, short, neatly combed blonde hair with a slight cowlick on the right side, a small upturned nose, wearing a bright yellow t-shirt with a cartoon car printed on it, blue overalls with large pockets, and red sneakers with white stripes. He also has a small, round patch on his left knee of his overalls.\",\n  \"pages\": [\n    {\n      \"text\": \"Erman, dört yaşında çok meraklı bir çocuktu. Şehirdeki her şeyi çok severdi ama en çok da arabalara bayılırdı! Sabah erkenden kalkar, pencereden şehri seyreder, geçen arabaları sayardı. Kırmızı arabalar, mavi taksiler, sarı otobüsler… Hepsi Erman için ayrı bir maceraydı.\",\n      \"sceneAction\": \"Erman standing by a window, looking out at a bustling city street filled with various colorful cars and buses. Sunlight streams through the window, illuminating Erman's face.\"\n    },\n    {\n      \"text\": \"Bir gün, babası Erman'ı şehirdeki büyük bir araba müzesine götürmeye karar verdi. Erman çok heyecanlıydı! Müzede birbirinden farklı, eski ve yeni arabalar vardı. Bazıları çok büyüktü, bazıları ise minicikti. Erman hepsini dikkatle inceledi.\",\n      \"sceneAction\": \"Erman inside a large car museum, surrounded by vintage and modern cars. He's pointing excitedly at a bright red sports car, his father smiling beside him.\"\n    },\n    {\n      \"text\": \"Müzede, itfaiye arabası da vardı! Erman, itfaiye arabasının içine binmek istedi. Babası onu kırmadı ve itfaiye arabasının içine bindirdi. Erman, kendini gerçek bir itfaiyeci gibi hissetti. \"Vınnn, vınnn!\" diye sesler çıkararak hayali yangınları söndürdü.\",\n      \"sceneAction\": \"Erman sitting in the driver's seat of a large, red fire truck inside the museum, pretending to steer and making siren noises. A museum employee is smiling at him.\"\n    },\n    {\n      \"text\": \"Öğleden sonra, Erman ve babası şehir parkına gittiler. Parkta, oyuncak arabalarıyla oynayan başka çocuklar da vardı. Erman, hemen onlara katıldı ve yeni arkadaşlarıyla birlikte arabalarını yarıştırmaya başladılar. Kahkahalarla dolu bir öğleden sonra geçirdiler.\",\n      \"sceneAction\": \"Erman playing with toy cars in a sunny city park with other children. They are racing their cars down a small, grassy hill, laughing and smiling.\"\n    },\n    {\n      \"text\": \"Akşam olunca, Erman eve döndü. O gün, şehirdeki arabalarla ilgili çok şey öğrenmişti. Yatağına yattığında, aklında rengarenk arabalar dönüyordu. Rüyasında, en sevdiği arabalarla birlikte maceralara atıldığını gördü. Şehirdeki arabalar, Erman'ın en güzel rüyası olmuştu.\",\n      \"sceneAction\": \"Erman lying in bed, fast asleep, with a plush toy car clutched in his hand. A nightlight casts a soft glow on his face. The silhouette of city buildings is visible through his bedroom window.\"\n    }\n  ]\n}",
+  "error": "SyntaxError: Expected ',' or '}' after property value in JSON at position 1609 (line 14 column 206)"
+}
+[2026-02-18T09:56:53.611Z] Gemini response received 
+[2026-02-18T09:56:53.613Z] Raw text length 2882
+[2026-02-18T09:59:38.514Z] Story generation API called 
+[2026-02-18T09:59:38.516Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "yemek yemek",
+  "theme": "ada",
+  "locale": "tr"
+}
+[2026-02-18T09:59:38.518Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:59:38.520Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:59:38.521Z] Sending prompt to Gemini... 
+[2026-02-18T09:59:38.537Z] Story generation API called 
+[2026-02-18T09:59:38.539Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "yemek yemek",
+  "theme": "ada",
+  "locale": "tr"
+}
+[2026-02-18T09:59:38.540Z] API Key check {
+  "exists": true
+}
+[2026-02-18T09:59:38.541Z] Initializing model: gemini-2.0-flash 
+[2026-02-18T09:59:38.542Z] Sending prompt to Gemini... 
+[2026-02-18T09:59:45.717Z] Gemini response received 
+[2026-02-18T09:59:45.718Z] Raw text length 2494
+[2026-02-18T09:59:45.834Z] Gemini response received 
+[2026-02-18T09:59:45.837Z] Raw text length 2357
+[2026-02-19T08:43:30.193Z] Story generation API called 
+[2026-02-19T08:43:30.196Z] Request body received {
+  "name": "Zafer",
+  "age": "5",
+  "interests": "fenerbahce spor takimi",
+  "theme": "okul",
+  "locale": "tr"
+}
+[2026-02-19T08:43:30.197Z] API Key check {
+  "exists": true
+}
+[2026-02-19T08:43:30.198Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T08:43:30.199Z] Sending prompt to Gemini... 
+[2026-02-19T08:43:30.219Z] Story generation API called 
+[2026-02-19T08:43:30.221Z] Request body received {
+  "name": "Zafer",
+  "age": "5",
+  "interests": "fenerbahce spor takimi",
+  "theme": "okul",
+  "locale": "tr"
+}
+[2026-02-19T08:43:30.221Z] API Key check {
+  "exists": true
+}
+[2026-02-19T08:43:30.222Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T08:43:30.223Z] Sending prompt to Gemini... 
+[2026-02-19T08:43:36.355Z] Gemini response received 
+[2026-02-19T08:43:36.357Z] Raw text length 2453
+[2026-02-19T08:43:37.681Z] Gemini response received 
+[2026-02-19T08:43:37.681Z] Raw text length 3083
+[2026-02-19T09:41:16.532Z] Story generation API called 
+[2026-02-19T09:41:16.534Z] Request body received {
+  "name": "burak",
+  "age": "4",
+  "interests": "cadilar bayrami",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-19T09:41:16.534Z] API Key check {
+  "exists": true
+}
+[2026-02-19T09:41:16.535Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T09:41:16.535Z] Sending prompt to Gemini... 
+[2026-02-19T09:41:16.600Z] Story generation API called 
+[2026-02-19T09:41:16.602Z] Request body received {
+  "name": "burak",
+  "age": "4",
+  "interests": "cadilar bayrami",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-19T09:41:16.603Z] API Key check {
+  "exists": true
+}
+[2026-02-19T09:41:16.603Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T09:41:16.604Z] Sending prompt to Gemini... 
+[2026-02-19T09:41:24.664Z] Gemini response received 
+[2026-02-19T09:41:24.665Z] Raw text length 3218
+[2026-02-19T09:41:25.683Z] Gemini response received 
+[2026-02-19T09:41:25.683Z] Raw text length 3624
+[2026-02-19T09:43:36.202Z] Story generation API called 
+[2026-02-19T09:43:36.204Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "kopek baliklari ile bir gun",
+  "theme": "deniz",
+  "locale": "tr"
+}
+[2026-02-19T09:43:36.206Z] API Key check {
+  "exists": true
+}
+[2026-02-19T09:43:36.207Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T09:43:36.208Z] Sending prompt to Gemini... 
+[2026-02-19T09:43:36.220Z] Story generation API called 
+[2026-02-19T09:43:36.222Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "kopek baliklari ile bir gun",
+  "theme": "deniz",
+  "locale": "tr"
+}
+[2026-02-19T09:43:36.223Z] API Key check {
+  "exists": true
+}
+[2026-02-19T09:43:36.223Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T09:43:36.224Z] Sending prompt to Gemini... 
+[2026-02-19T09:43:42.690Z] Gemini response received 
+[2026-02-19T09:43:42.690Z] Raw text length 2940
+[2026-02-19T09:43:43.102Z] Gemini response received 
+[2026-02-19T09:43:43.103Z] Raw text length 3313
+[2026-02-19T10:04:28.375Z] Story generation API called 
+[2026-02-19T10:04:28.377Z] Request body received {
+  "name": "Ayse",
+  "age": "4",
+  "interests": "barbie bebekler",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-19T10:04:28.378Z] API Key check {
+  "exists": true
+}
+[2026-02-19T10:04:28.379Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T10:04:28.380Z] Sending prompt to Gemini... 
+[2026-02-19T10:04:28.398Z] Story generation API called 
+[2026-02-19T10:04:28.399Z] Request body received {
+  "name": "Ayse",
+  "age": "4",
+  "interests": "barbie bebekler",
+  "theme": "sehir",
+  "locale": "tr"
+}
+[2026-02-19T10:04:28.400Z] API Key check {
+  "exists": true
+}
+[2026-02-19T10:04:28.400Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T10:04:28.401Z] Sending prompt to Gemini... 
+[2026-02-19T10:04:35.229Z] Gemini response received 
+[2026-02-19T10:04:35.230Z] Raw text length 2741
+[2026-02-19T10:04:36.795Z] Gemini response received 
+[2026-02-19T10:04:36.795Z] Raw text length 3320
+[2026-02-19T10:05:33.666Z] Story generation API called 
+[2026-02-19T10:05:33.667Z] Request body received {
+  "name": "ayse",
+  "age": "4",
+  "interests": "balon baligi",
+  "theme": "deniz",
+  "locale": "tr"
+}
+[2026-02-19T10:05:33.668Z] API Key check {
+  "exists": true
+}
+[2026-02-19T10:05:33.669Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T10:05:33.670Z] Sending prompt to Gemini... 
+[2026-02-19T10:05:33.682Z] Story generation API called 
+[2026-02-19T10:05:33.683Z] Request body received {
+  "name": "ayse",
+  "age": "4",
+  "interests": "balon baligi",
+  "theme": "deniz",
+  "locale": "tr"
+}
+[2026-02-19T10:05:33.684Z] API Key check {
+  "exists": true
+}
+[2026-02-19T10:05:33.685Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T10:05:33.686Z] Sending prompt to Gemini... 
+[2026-02-19T10:05:40.183Z] Gemini response received 
+[2026-02-19T10:05:40.183Z] Raw text length 2485
+[2026-02-19T10:05:41.615Z] Gemini response received 
+[2026-02-19T10:05:41.616Z] Raw text length 3207

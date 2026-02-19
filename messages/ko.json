@@ -28,6 +28,44 @@
         },
         "generateButton": "이야기 만들기",
         "generating": "마법을 부리는 중...",
-        "footer": "아이와 함께 이야기를 만들어보세요 ✨"
+        "footer": "아이와 함께 이야기를 만들어보세요 ✨",
+        "login": "로그인",
+        "signup": "가입하기",
+        "logout": "로그아웃"
+    },
+    "GeneratePage": {
+        "status_generating": "이야기를 쓰는 중...",
+        "status_magic": "{name}을(를) 위한 마법 세계를 만드는 중...",
+        "status_images": "이미지 준비 중...",
+        "status_ready": "이야기가 준비되었습니다! 즐겁게 읽으세요...",
+        "error_generic": "오류가 발생했습니다. 다시 시도해 주세요."
+    },
+    "ReadPage": {
+        "loading_image": "그림을 그리는 중...",
+        "prev": "이전",
+        "next": "다음"
+    },
+    "SEO": {
+        "title": "Kidoredo: 어린이를 위한 맞춤형 AI 잠자리 동화",
+        "description": "아이가 주인공이 되는 마법 같은 맞춤형 AI 이야기를 만들어보세요! Kidoredo로 창의력을 키우고 잠자리를 즐겁게 만드세요. 무료로 체험해보세요.",
+        "keywords": "맞춤형 AI 이야기, 커스텀 동화책, AI 잠자리 동화, 어린이 이야기, 이야기 생성기, 온라인 동화"
+    },
+    "Auth": {
+        "loginTitle": "Kidoredo 로그인",
+        "signupTitle": "Kidoredo 가입하기",
+        "email": "이메일",
+        "password": "비밀번호",
+        "name": "이름",
+        "loginButton": "로그인",
+        "signupButton": "가입하기",
+        "noAccount": "계정이 없으신가요?",
+        "hasAccount": "이미 계정이 있으신가요?",
+        "backToHome": "홈으로 돌아가기",
+        "errorGeneric": "오류가 발생했습니다",
+        "forgotPassword": "비밀번호를 잊으셨나요?",
+        "resetPasswordTitle": "비밀번호 재설정",
+        "sendResetLink": "재설정 링크 보내기",
+        "backToLogin": "로그인으로 돌아가기",
+        "resetEmailSent": "재설정 이메일이 전송되었습니다!"
     }
 }

@@ -28,6 +28,44 @@
         },
         "generateButton": "Crear Historia",
         "generating": "Creando magia...",
-        "footer": "Historias creadas junto con tu hijo ✨"
+        "footer": "Historias creadas junto con tu hijo ✨",
+        "login": "Iniciar sesión",
+        "signup": "Registrarse",
+        "logout": "Cerrar sesión"
+    },
+    "GeneratePage": {
+        "status_generating": "Escribiendo tu historia...",
+        "status_magic": "Creando un mundo mágico para {name}...",
+        "status_images": "Preparando imágenes...",
+        "status_ready": "¡Tu historia está lista! Disfruta la lectura...",
+        "error_generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+    },
+    "ReadPage": {
+        "loading_image": "Pintando la imagen...",
+        "prev": "Anterior",
+        "next": "Siguiente"
+    },
+    "SEO": {
+        "title": "Kidoredo: Cuentos de buenas noches personalizados con IA para niños",
+        "description": "¡Crea cuentos mágicos y personalizados con IA donde tu hijo es el héroe! Fomenta la creatividad y haz que la hora de dormir sea divertida con Kidoredo. Pruébalo gratis.",
+        "keywords": "Cuentos IA personalizados, Libros infantiles personalizados, Cuentos de buenas noches IA, Historias para niños, Generador de cuentos, Cuentos online"
+    },
+    "Auth": {
+        "loginTitle": "Iniciar sesión en Kidoredo",
+        "signupTitle": "Regístrate en Kidoredo",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "name": "Nombre",
+        "loginButton": "Iniciar sesión",
+        "signupButton": "Regístrate",
+        "noAccount": "¿No tienes una cuenta?",
+        "hasAccount": "¿Ya tienes una cuenta?",
+        "backToHome": "Volver al inicio",
+        "errorGeneric": "Ocurrió un error",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "resetPasswordTitle": "Restablecer contraseña",
+        "sendResetLink": "Enviar enlace",
+        "backToLogin": "Volver al inicio de sesión",
+        "resetEmailSent": "¡Correo de restablecimiento enviado!"
     }
 }

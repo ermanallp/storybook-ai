@@ -28,6 +28,44 @@
         },
         "generateButton": "物語を作成",
         "generating": "魔法をかけています...",
-        "footer": "お子様と一緒に物語を作りましょう ✨"
+        "footer": "お子様と一緒に物語を作りましょう ✨",
+        "login": "ログイン",
+        "signup": "登録",
+        "logout": "ログアウト"
+    },
+    "GeneratePage": {
+        "status_generating": "物語を書いています...",
+        "status_magic": "{name}のために魔法の世界を作っています...",
+        "status_images": "画像を準備中...",
+        "status_ready": "物語の準備ができました！楽しんで読んでください...",
+        "error_generic": "エラーが発生しました。もう一度お試しください。"
+    },
+    "ReadPage": {
+        "loading_image": "絵を描いています...",
+        "prev": "前へ",
+        "next": "次へ"
+    },
+    "SEO": {
+        "title": "Kidoredo: 子供向けのパーソナライズされたAI読み聞かせ",
+        "description": "お子様が主人公になる魔法のようなパーソナライズされたAIストーリーを作成しましょう！Kidoredoで創造性を育み、寝る時間を楽しくしましょう。無料でお試しください。",
+        "keywords": "パーソナライズされたAIストーリー, カスタム絵本, AI読み聞かせ, 子供向けの物語, ストーリージェネレーター, オンライン絵本"
+    },
+    "Auth": {
+        "loginTitle": "Kidoredoにログイン",
+        "signupTitle": "Kidoredoに登録",
+        "email": "メール",
+        "password": "パスワード",
+        "name": "名前",
+        "loginButton": "ログイン",
+        "signupButton": "登録",
+        "noAccount": "アカウントをお持ちでないですか？",
+        "hasAccount": "すでにアカウントをお持ちですか？",
+        "backToHome": "ホームに戻る",
+        "errorGeneric": "エラーが発生しました",
+        "forgotPassword": "パスワードをお忘れですか？",
+        "resetPasswordTitle": "パスワードのリセット",
+        "sendResetLink": "リセットリンクを送信",
+        "backToLogin": "ログインに戻る",
+        "resetEmailSent": "リセットメールを送信しました！"
     }
 }

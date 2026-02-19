@@ -28,6 +28,44 @@
         },
         "generateButton": "Crea Storia",
         "generating": "La magia sta arrivando...",
-        "footer": "Storie create insieme al tuo bambino ✨"
+        "footer": "Storie create insieme al tuo bambino ✨",
+        "login": "Accedi",
+        "signup": "Iscriviti",
+        "logout": "Esci"
+    },
+    "GeneratePage": {
+        "status_generating": "Scrivendo la tua storia...",
+        "status_magic": "Creando un mondo magico per {name}...",
+        "status_images": "Preparando le immagini...",
+        "status_ready": "La tua storia è pronta! Buona lettura...",
+        "error_generic": "Si è verificato un errore. Riprova."
+    },
+    "ReadPage": {
+        "loading_image": "Dipingendo l'immagine...",
+        "prev": "Precedente",
+        "next": "Successivo"
+    },
+    "SEO": {
+        "title": "Kidoredo: Storie della buonanotte personalizzate con IA per bambini",
+        "description": "Crea storie magiche e personalizzate con l'IA dove tuo figlio è l'eroe! Stimola la creatività e rendi divertente l'ora della nanna con Kidoredo. Provalo gratis.",
+        "keywords": "Storie IA personalizzate, Libri per bambini personalizzati, Storie della buonanotte IA, Racconti per bambini, Generatore di storie, Storie online"
+    },
+    "Auth": {
+        "loginTitle": "Accedi a Kidoredo",
+        "signupTitle": "Iscriviti a Kidoredo",
+        "email": "Email",
+        "password": "Password",
+        "name": "Nome",
+        "loginButton": "Accedi",
+        "signupButton": "Iscriviti",
+        "noAccount": "Non hai un account?",
+        "hasAccount": "Hai già un account?",
+        "backToHome": "Torna alla Home",
+        "errorGeneric": "Si è verificato un errore",
+        "forgotPassword": "Password dimenticata?",
+        "resetPasswordTitle": "Reimposta password",
+        "sendResetLink": "Invia link",
+        "backToLogin": "Torna al login",
+        "resetEmailSent": "Email di reimpostazione inviata!"
     }
 }

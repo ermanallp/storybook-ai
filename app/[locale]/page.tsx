@@ -7,6 +7,11 @@ import { BookOpen, Sparkles, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 
+import { signOut } from 'firebase/auth';
+import { auth } from '@/app/lib/firebase';
+import { useAuth } from '@/components/auth/AuthProvider';
+import Link from 'next/link';
+
 export default function Home() {
   const router = useRouter();
   const t = useTranslations('HomePage');
@@ -15,10 +20,23 @@ export default function Home() {
   const [interests, setInterests] = useState('');
   const [theme, setTheme] = useState('macera');
   const [loading, setLoading] = useState(false);
+  const { user } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!user) {
+      // User is not logged in, save data to localStorage and redirect to login
+      localStorage.setItem('pendingStory', JSON.stringify({
+        name,
+        age,
+        interests,
+        theme
+      }));
+      router.push('/login');
+      return;
+    }
 
     // Store data in localStorage or context to pass to the story generation page
     // For now, we'll pass it via query params or just navigate to a loading state
@@ -32,6 +50,10 @@ export default function Home() {
     router.push(`story/generate?${queryParams}`);
   };
 
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
+
   return (
     <main className="min-h-screen relative flex flex-col items-center justify-center p-4 overflow-hidden">
       {/* Background Image */}
@@ -42,7 +64,26 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30" /> {/* Overlay for checkability */}
       </div>
 
-      <LanguageSwitcher />
+      <div className="absolute top-4 right-4 z-20 flex gap-4 items-center">
+        <LanguageSwitcher />
+        {!user ? (
+          <>
+            <Link href="/login" className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm font-semibold transition-all border border-white/30 shadow-lg">
+              {t('login')}
+            </Link>
+            <Link href="/signup" className="px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-purple-900 rounded-lg font-bold transition-all shadow-lg">
+              {t('signup')}
+            </Link>
+          </>
+        ) : (
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-500/80 hover:bg-red-500 text-white rounded-lg backdrop-blur-sm font-semibold transition-all shadow-lg border border-white/20"
+          >
+            {t('logout')}
+          </button>
+        )}
+      </div>
 
       {/* Brand Header */}
       <div className="z-10 mb-8 flex flex-col items-center">

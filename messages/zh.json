@@ -28,6 +28,44 @@
         },
         "generateButton": "生成故事",
         "generating": "正在施展魔法...",
-        "footer": "与您的孩子一起创作故事 ✨"
+        "footer": "与您的孩子一起创作故事 ✨",
+        "login": "登录",
+        "signup": "注册",
+        "logout": "登出"
+    },
+    "GeneratePage": {
+        "status_generating": "正在编写您的故事...",
+        "status_magic": "正在为 {name} 创造魔法世界...",
+        "status_images": "正在准备图片...",
+        "status_ready": "您的故事准备好了！祝您阅读愉快...",
+        "error_generic": "发生错误。请重试。"
+    },
+    "ReadPage": {
+        "loading_image": "正在绘制图片...",
+        "prev": "上一页",
+        "next": "下一页"
+    },
+    "SEO": {
+        "title": "Kidoredo：儿童个性化 AI 睡前故事",
+        "description": "创造神奇的个性化 AI 故事，让你的孩子成为英雄！通过 Kidoredo 的定制书籍激发创造力，让睡前时光变得有趣。免费试用。",
+        "keywords": "个性化 AI 故事, 定制儿童书籍, AI 睡前故事, 儿童故事, 故事生成器, 在线睡前故事"
+    },
+    "Auth": {
+        "loginTitle": "登录 Kidoredo",
+        "signupTitle": "注册 Kidoredo",
+        "email": "邮箱",
+        "password": "密码",
+        "name": "姓名",
+        "loginButton": "登录",
+        "signupButton": "注册",
+        "noAccount": "没有账号？",
+        "hasAccount": "已有账号？",
+        "backToHome": "返回首页",
+        "errorGeneric": "发生错误",
+        "forgotPassword": "忘记密码？",
+        "resetPasswordTitle": "重置密码",
+        "sendResetLink": "发送重置链接",
+        "backToLogin": "返回登录",
+        "resetEmailSent": "重置邮件已发送！"
     }
 }

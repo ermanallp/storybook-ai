@@ -28,7 +28,28 @@
         },
         "generateButton": "Créer l'Histoire",
         "generating": "La magie opère...",
-        "footer": "Histoires créées ensemble avec votre enfant ✨"
+        "footer": "Histoires créées ensemble avec votre enfant ✨",
+        "login": "Se connecter",
+        "signup": "S'inscrire",
+        "logout": "Se déconnecter"
+    },
+    "Auth": {
+        "loginTitle": "Se connecter à Kidoredo",
+        "signupTitle": "S'inscrire à Kidoredo",
+        "email": "Email",
+        "password": "Mot de passe",
+        "name": "Nom",
+        "loginButton": "Se connecter",
+        "signupButton": "S'inscrire",
+        "noAccount": "Pas de compte ?",
+        "hasAccount": "Vous avez déjà un compte ?",
+        "backToHome": "Retour à l'accueil",
+        "errorGeneric": "Une erreur est survenue",
+        "forgotPassword": "Mot de passe oublié ?",
+        "resetPasswordTitle": "Réinitialiser le mot de passe",
+        "sendResetLink": "Envoyer le lien",
+        "backToLogin": "Retour à la connexion",
+        "resetEmailSent": "Email de réinitialisation envoyé !"
     },
     "GeneratePage": {
         "status_generating": "Écriture de votre histoire...",
@@ -41,5 +62,10 @@
         "loading_image": "Peinture de l'image...",
         "prev": "Précédent",
         "next": "Suivant"
+    },
+    "SEO": {
+        "title": "Kidoredo : Histoires du soir personnalisées par IA pour enfants",
+        "description": "Créez des histoires magiques et personnalisées où votre enfant est le héros ! Stimulez sa créativité et rendez le coucher amusant avec Kidoredo. Essai gratuit.",
+        "keywords": "Histoires IA personnalisées, Livres enfants personnalisés, Histoires du soir IA, Histoires pour enfants, Générateur d'histoires, Histoires en ligne"
     }
 }

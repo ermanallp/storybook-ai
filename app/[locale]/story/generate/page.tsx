@@ -8,6 +8,7 @@ import { Sparkles } from 'lucide-react';
 import { Story } from '@/types';
 import { saveStory } from '@/app/lib/storage';
 import { useLocale, useTranslations } from 'next-intl';
+import { useAuth } from '@/components/auth/AuthProvider';
 
 function GenerateStoryContent() {
     const searchParams = useSearchParams();
@@ -15,8 +16,25 @@ function GenerateStoryContent() {
     const t = useTranslations('GeneratePage');
     const locale = useLocale();
     const [status, setStatus] = useState(t('status_generating'));
+    const { user, loading } = useAuth();
 
     useEffect(() => {
+        if (!loading && !user) {
+            router.push('/login');
+        }
+    }, [user, loading, router]);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-gradient-to-b from-purple-500 to-blue-600 flex items-center justify-center text-white">
+                <Sparkles size={64} className="text-yellow-300 animate-spin" />
+            </div>
+        );
+    }
+
+    useEffect(() => {
+        if (loading || !user) return; // Wait for auth
+
         const generate = async () => {
             const name = searchParams.get('name');
             const age = searchParams.get('age');
@@ -104,7 +122,7 @@ function GenerateStoryContent() {
         };
 
         generate();
-    }, [searchParams, router, t, locale]);
+    }, [searchParams, router, t, locale, user, loading]);
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-purple-500 to-blue-600 flex flex-col items-center justify-center text-white p-4">

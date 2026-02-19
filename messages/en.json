@@ -28,7 +28,10 @@
     },
     "generateButton": "Create Story",
     "generating": "Magic is brewing...",
-    "footer": "Stories created together with your child ✨"
+    "footer": "Stories created together with your child ✨",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Log Out"
   },
   "GeneratePage": {
     "status_generating": "Writing your story...",
@@ -46,5 +49,23 @@
     "title": "Kidoredo: Personalized AI Bedtime Stories for Kids",
     "description": "Create magical, personalized AI stories where your child is the hero! Boost creativity and make bedtime fun with Kidoredo's custom books. Try for free.",
     "keywords": "Personalized AI Stories, Custom Kids Books, AI Bedtime Stories, Children Stories, Kids Story Generator, Bedtime Stories Online"
+  },
+  "Auth": {
+    "loginTitle": "Log In to Kidoredo",
+    "signupTitle": "Sign Up for Kidoredo",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "loginButton": "Log In",
+    "signupButton": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "backToHome": "Back to Home",
+    "errorGeneric": "An error occurred",
+    "forgotPassword": "Forgot Password?",
+    "resetPasswordTitle": "Reset Password",
+    "sendResetLink": "Send Reset Link",
+    "backToLogin": "Back to Login",
+    "resetEmailSent": "Password reset email sent!"
   }
 }

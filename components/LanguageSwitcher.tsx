@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className="z-50 w-full flex justify-end mb-4 md:absolute md:top-4 md:right-4 md:w-auto md:mb-0 pointer-events-none md:pointer-events-auto">
+        <div className="flex justify-end mb-4 md:mb-0 pointer-events-none md:pointer-events-auto">
             <div className="pointer-events-auto">
                 <select
                     defaultValue={locale}

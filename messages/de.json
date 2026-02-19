@@ -28,6 +28,44 @@
         },
         "generateButton": "Geschichte Erstellen",
         "generating": "Magie wird gebraut...",
-        "footer": "Geschichten, die zusammen mit Ihrem Kind erstellt wurden ✨"
+        "footer": "Geschichten, die zusammen mit Ihrem Kind erstellt wurden ✨",
+        "login": "Anmelden",
+        "signup": "Registrieren",
+        "logout": "Abmelden"
+    },
+    "GeneratePage": {
+        "status_generating": "Deine Geschichte wird geschrieben...",
+        "status_magic": "Erschaffe eine magische Welt für {name}...",
+        "status_images": "Bilder werden vorbereitet...",
+        "status_ready": "Deine Geschichte ist fertig! Viel Spaß beim Lesen...",
+        "error_generic": "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
+    },
+    "ReadPage": {
+        "loading_image": "Das Bild wird gemalt...",
+        "prev": "Zurück",
+        "next": "Weiter"
+    },
+    "SEO": {
+        "title": "Kidoredo: Personalisierte KI-Gute-Nacht-Geschichten für Kinder",
+        "description": "Erstellen Sie magische, personalisierte KI-Geschichten, in denen Ihr Kind der Held ist! Fördern Sie Kreativität und machen Sie das Schlafengehen mit Kidoredo zum Spaß. Kostenlos ausprobieren.",
+        "keywords": "Personalisierte KI-Geschichten, Benutzerdefinierte Kinderbücher, KI-Gute-Nacht-Geschichten, Kindergeschichten, Geschichtengenerator, Online-Gute-Nacht-Geschichten"
+    },
+    "Auth": {
+        "loginTitle": "Bei Kidoredo anmelden",
+        "signupTitle": "Bei Kidoredo registrieren",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "name": "Name",
+        "loginButton": "Anmelden",
+        "signupButton": "Registrieren",
+        "noAccount": "Kein Konto?",
+        "hasAccount": "Haben Sie bereits ein Konto?",
+        "backToHome": "Zurück zur Startseite",
+        "errorGeneric": "Ein Fehler ist aufgetreten",
+        "forgotPassword": "Passwort vergessen?",
+        "resetPasswordTitle": "Passwort zurücksetzen",
+        "sendResetLink": "Link senden",
+        "backToLogin": "Zurück zum Login",
+        "resetEmailSent": "E-Mail zum Zurücksetzen gesendet!"
     }
 }
