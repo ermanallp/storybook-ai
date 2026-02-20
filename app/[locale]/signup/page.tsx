@@ -41,6 +41,7 @@ export default function SignUp() {
                 router.push("/");
             }
         } catch (err: any) {
+            console.error("Signup error:", err);
             setError(t('errorGeneric'));
         }
     };

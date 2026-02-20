@@ -39,6 +39,7 @@ export default function Login() {
                 router.push("/");
             }
         } catch (err: any) {
+            console.error("Login error:", err);
             setError(t('errorGeneric'));
         }
     };
