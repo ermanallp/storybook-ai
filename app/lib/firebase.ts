@@ -11,7 +11,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const auth = getAuth(app);
+const app = getApps().length ? getApp() : (firebaseConfig.apiKey ? initializeApp(firebaseConfig) : undefined);
+const auth = app ? getAuth(app) : undefined;
+
+if (!app) {
+    console.error("Firebase initialization failed: Missing API Key. Check your environment variables.");
+}
 
 export { app, auth };
