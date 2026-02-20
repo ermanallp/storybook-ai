@@ -20,6 +20,7 @@ export default function Login() {
         e.preventDefault();
         setError("");
         try {
+            if (!auth) throw new Error("Firebase auth is not initialized");
             await signInWithEmailAndPassword(auth, email, password);
 
             // Check for pending story
@@ -47,6 +48,7 @@ export default function Login() {
         setError("");
         setResetMessage("");
         try {
+            if (!auth) throw new Error("Firebase auth is not initialized");
             const { sendPasswordResetEmail } = await import("firebase/auth");
             await sendPasswordResetEmail(auth, email);
             setResetMessage(t('resetEmailSent'));

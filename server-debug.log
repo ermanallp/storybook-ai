@@ -2066,3 +2066,33 @@
 [2026-02-19T10:05:40.183Z] Raw text length 2485
 [2026-02-19T10:05:41.615Z] Gemini response received 
 [2026-02-19T10:05:41.616Z] Raw text length 3207
+[2026-02-19T19:16:02.639Z] Story generation API called 
+[2026-02-19T19:16:02.642Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "snow in the city",
+  "theme": "sehir",
+  "locale": "en"
+}
+[2026-02-19T19:16:02.643Z] API Key check {
+  "exists": true
+}
+[2026-02-19T19:16:02.643Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T19:16:02.644Z] Sending prompt to Gemini... 
+[2026-02-19T19:16:02.655Z] Story generation API called 
+[2026-02-19T19:16:02.656Z] Request body received {
+  "name": "Kai",
+  "age": "4",
+  "interests": "snow in the city",
+  "theme": "sehir",
+  "locale": "en"
+}
+[2026-02-19T19:16:02.657Z] API Key check {
+  "exists": true
+}
+[2026-02-19T19:16:02.657Z] Initializing model: gemini-2.0-flash 
+[2026-02-19T19:16:02.658Z] Sending prompt to Gemini... 
+[2026-02-19T19:16:10.334Z] Gemini response received 
+[2026-02-19T19:16:10.335Z] Raw text length 3521
+[2026-02-19T19:16:11.249Z] Gemini response received 
+[2026-02-19T19:16:11.250Z] Raw text length 3875

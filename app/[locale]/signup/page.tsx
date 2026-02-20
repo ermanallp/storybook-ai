@@ -19,6 +19,7 @@ export default function SignUp() {
         e.preventDefault();
         setError("");
         try {
+            if (!auth) throw new Error("Firebase auth is not initialized");
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             await updateProfile(userCredential.user, {
                 displayName: name,

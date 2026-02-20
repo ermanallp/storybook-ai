@@ -51,7 +51,7 @@ export default function Home() {
   };
 
   const handleLogout = async () => {
-    await signOut(auth);
+    if (auth) await signOut(auth);
   };
 
   return (
