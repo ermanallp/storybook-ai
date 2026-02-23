@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center p-4 overflow-hidden">
+    <main className="min-h-screen relative flex flex-col items-center justify-center px-4 pb-4 pt-24 sm:p-4 overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -64,21 +64,21 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30" /> {/* Overlay for checkability */}
       </div>
 
-      <div className="absolute top-4 right-4 z-20 flex gap-4 items-center">
+      <div className="absolute top-4 right-4 z-20 flex gap-2 sm:gap-4 items-center">
         <LanguageSwitcher />
         {!user ? (
           <>
-            <Link href="/login" className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm font-semibold transition-all border border-white/30 shadow-lg">
+            <Link href="/login" className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm font-semibold transition-all border border-white/30 shadow-lg">
               {t('login')}
             </Link>
-            <Link href="/signup" className="px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-purple-900 rounded-lg font-bold transition-all shadow-lg">
+            <Link href="/signup" className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-yellow-400 hover:bg-yellow-300 text-purple-900 rounded-lg font-bold transition-all shadow-lg">
               {t('signup')}
             </Link>
           </>
         ) : (
           <button
             onClick={handleLogout}
-            className="px-4 py-2 bg-red-500/80 hover:bg-red-500 text-white rounded-lg backdrop-blur-sm font-semibold transition-all shadow-lg border border-white/20"
+            className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-red-500/80 hover:bg-red-500 text-white rounded-lg backdrop-blur-sm font-semibold transition-all shadow-lg border border-white/20"
           >
             {t('logout')}
           </button>

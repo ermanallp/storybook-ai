@@ -91,7 +91,7 @@ function GenerateStoryContent() {
 
                                 // Preload image in browser
                                 const img = new Image();
-                                img.src = imageData.imageUrl!;
+                                img.src = imageData.imageUrl;
                             }
                         } else {
                             const errorText = await imageResponse.text();

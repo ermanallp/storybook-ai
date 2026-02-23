@@ -19,11 +19,11 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className="flex justify-end mb-4 md:mb-0 pointer-events-none md:pointer-events-auto">
+        <div className="flex justify-end pointer-events-none md:pointer-events-auto">
             <div className="pointer-events-auto">
                 <select
                     defaultValue={locale}
-                    className="bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 [&>option]:text-black"
+                    className="bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-lg px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 [&>option]:text-black"
                     onChange={onSelectChange}
                     disabled={isPending}
                 >
