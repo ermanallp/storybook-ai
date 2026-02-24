@@ -32,7 +32,7 @@ export default function Home() {
         name,
         age,
         interests,
-        theme
+        theme: t(`themes.${theme}`)
       }));
       router.push('/login');
       return;
@@ -44,7 +44,7 @@ export default function Home() {
       name,
       age,
       interests,
-      theme,
+      theme: t(`themes.${theme}`),
     }).toString();
 
     router.push(`story/generate?${queryParams}`);
