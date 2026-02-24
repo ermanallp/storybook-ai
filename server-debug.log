@@ -2096,3 +2096,93 @@
 [2026-02-19T19:16:10.335Z] Raw text length 3521
 [2026-02-19T19:16:11.249Z] Gemini response received 
 [2026-02-19T19:16:11.250Z] Raw text length 3875
+[2026-02-23T08:40:54.738Z] Story generation API called 
+[2026-02-23T08:40:54.742Z] Request body received {
+  "name": "Ermano",
+  "age": "4",
+  "interests": "mexican food",
+  "theme": "sehir",
+  "locale": "en"
+}
+[2026-02-23T08:40:54.742Z] API Key check {
+  "exists": true
+}
+[2026-02-23T08:40:54.742Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T08:40:54.742Z] Sending prompt to Gemini... 
+[2026-02-23T08:40:54.758Z] Story generation API called 
+[2026-02-23T08:40:54.758Z] Request body received {
+  "name": "Ermano",
+  "age": "4",
+  "interests": "mexican food",
+  "theme": "sehir",
+  "locale": "en"
+}
+[2026-02-23T08:40:54.759Z] API Key check {
+  "exists": true
+}
+[2026-02-23T08:40:54.759Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T08:40:54.760Z] Sending prompt to Gemini... 
+[2026-02-23T08:41:01.920Z] Gemini response received 
+[2026-02-23T08:41:01.920Z] Raw text length 3352
+[2026-02-23T08:41:03.050Z] Gemini response received 
+[2026-02-23T08:41:03.050Z] Raw text length 3569
+[2026-02-23T09:19:08.440Z] Story generation API called 
+[2026-02-23T09:19:08.442Z] Request body received {
+  "name": "ali",
+  "age": "4",
+  "interests": "spiderman",
+  "theme": "lunapark",
+  "locale": "tr"
+}
+[2026-02-23T09:19:08.443Z] API Key check {
+  "exists": true
+}
+[2026-02-23T09:19:08.444Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T09:19:08.444Z] Sending prompt to Gemini... 
+[2026-02-23T09:19:08.458Z] Story generation API called 
+[2026-02-23T09:19:08.459Z] Request body received {
+  "name": "ali",
+  "age": "4",
+  "interests": "spiderman",
+  "theme": "lunapark",
+  "locale": "tr"
+}
+[2026-02-23T09:19:08.460Z] API Key check {
+  "exists": true
+}
+[2026-02-23T09:19:08.460Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T09:19:08.461Z] Sending prompt to Gemini... 
+[2026-02-23T09:19:16.617Z] Gemini response received 
+[2026-02-23T09:19:16.618Z] Raw text length 2920
+[2026-02-23T09:19:17.535Z] Gemini response received 
+[2026-02-23T09:19:17.535Z] Raw text length 3289
+[2026-02-23T09:26:51.219Z] Story generation API called 
+[2026-02-23T09:26:51.221Z] Request body received {
+  "name": "tarkan",
+  "age": "4",
+  "interests": "sarki soylemek",
+  "theme": "okul",
+  "locale": "tr"
+}
+[2026-02-23T09:26:51.222Z] API Key check {
+  "exists": true
+}
+[2026-02-23T09:26:51.223Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T09:26:51.224Z] Sending prompt to Gemini... 
+[2026-02-23T09:26:51.233Z] Story generation API called 
+[2026-02-23T09:26:51.234Z] Request body received {
+  "name": "tarkan",
+  "age": "4",
+  "interests": "sarki soylemek",
+  "theme": "okul",
+  "locale": "tr"
+}
+[2026-02-23T09:26:51.235Z] API Key check {
+  "exists": true
+}
+[2026-02-23T09:26:51.236Z] Initializing model: gemini-2.0-flash 
+[2026-02-23T09:26:51.238Z] Sending prompt to Gemini... 
+[2026-02-23T09:26:58.752Z] Gemini response received 
+[2026-02-23T09:26:58.753Z] Raw text length 2981
+[2026-02-23T09:26:59.704Z] Gemini response received 
+[2026-02-23T09:26:59.705Z] Raw text length 3396
