@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Home, BookOpen } from 'lucide-react';
 import { Story } from '@/types';
 import { getStory } from '@/app/lib/storage';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function ReadStory() {
     const router = useRouter();
@@ -89,6 +90,7 @@ export default function ReadStory() {
             </div>
 
             {/* Top Navigation */}
+            <h1 className="sr-only">Kidoredo Story Reader</h1>
             <div className="absolute top-6 left-6 z-20">
                 <button
                     onClick={() => router.push('/')}
@@ -118,15 +120,18 @@ export default function ReadStory() {
                         >
                             {images[currentPage] ? (
                                 <>
-                                    <img
+                                    <Image
                                         src={images[currentPage]}
                                         alt={`Page ${currentPage + 1}`}
-                                        className={`w-full h-full object-cover transition-opacity duration-500 ${loadedImages.has(currentPage) ? 'opacity-100' : 'opacity-0'}`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        className={`object-cover transition-opacity duration-500 ${loadedImages.has(currentPage) ? 'opacity-100' : 'opacity-0'}`}
                                         onLoad={() => setLoadedImages(prev => new Set(prev).add(currentPage))}
                                         onError={(e) => {
                                             console.error("Image load error", e);
                                             e.currentTarget.style.display = 'none'; // Hide broken image
                                         }}
+                                        priority={currentPage === 0}
                                     />
                                     {!loadedImages.has(currentPage) && (
                                         <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-gray-100">

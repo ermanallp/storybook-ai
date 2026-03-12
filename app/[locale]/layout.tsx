@@ -40,9 +40,15 @@ export async function generateMetadata({
     openGraph: {
       title: t('title'),
       description: t('description'),
+      url: baseUrl,
       type: "website",
       locale: locale === 'tr' ? 'tr_TR' : 'en_US', // Basic mapping, can be expanded
       siteName: "Kidoredo",
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
     },
     alternates: {
       canonical: `${baseUrl}/${locale}`,

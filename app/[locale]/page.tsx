@@ -11,6 +11,8 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/app/lib/firebase';
 import { useAuth } from '@/components/auth/AuthProvider';
 import Link from 'next/link';
+import Image from 'next/image';
+import FAQComponent from '@/components/FAQComponent';
 
 export default function Home() {
   const router = useRouter();
@@ -57,12 +59,19 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex flex-col items-center justify-center px-4 pb-4 pt-24 sm:p-4 overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/landing-bg.png')" }}
-      >
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/landing-bg.png"
+          alt="Kidoredo Background"
+          fill
+          priority
+          quality={80}
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-black/30" /> {/* Overlay for checkability */}
       </div>
+
+      <h1 className="sr-only">{t('seoHeading')} | Kidoredo</h1>
 
       <div className="absolute top-4 right-4 z-20 flex gap-2 sm:gap-4 items-center">
         <LanguageSwitcher />
@@ -86,10 +95,10 @@ export default function Home() {
       </div>
 
       {/* Brand Header */}
-      <div className="z-10 mb-8 flex flex-col items-center">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] font-[var(--font-geist-sans)]">
+      <div className="z-10 mb-8 flex flex-col items-center" aria-hidden="true">
+        <div className="text-5xl md:text-7xl font-extrabold text-white tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] font-[var(--font-geist-sans)]">
           Kidoredo
-        </h1>
+        </div>
         <div className="h-1 w-24 bg-yellow-400 rounded-full mt-2 shadow-lg" />
       </div>
 
@@ -190,8 +199,17 @@ export default function Home() {
         </form>
       </motion.div>
 
-      <div className="z-10 mt-8 text-white/80 text-sm text-center font-medium drop-shadow-sm bg-black/10 px-4 py-2 rounded-full backdrop-blur-sm">
-        <p>{t('footer')}</p>
+      <FAQComponent />
+
+      <div className="z-10 mt-8 flex flex-col items-center gap-2">
+        <div className="text-white/80 text-sm text-center font-medium drop-shadow-sm bg-black/10 px-4 py-2 rounded-full backdrop-blur-sm">
+          <p>{t('footer')}</p>
+        </div>
+        <nav className="flex gap-4 text-xs text-white/60">
+          <Link href="/privacy" className="hover:text-white transition-colors">{t('privacyPolicy')}</Link>
+          <Link href="/terms" className="hover:text-white transition-colors">{t('termsOfService')}</Link>
+          <a href="mailto:hello@kidoredo.com" className="hover:text-white transition-colors">{t('contactUs')}</a>
+        </nav>
       </div>
     </main>
   );

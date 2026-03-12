@@ -29,9 +29,22 @@
         "generateButton": "Hikayeyi Yarat",
         "generating": "Sihir Hazırlanıyor...",
         "footer": "Hikayeler Çocuğunuz ile Beraber Yaratılsın ✨",
+        "privacyPolicy": "Gizlilik Politikası",
+        "termsOfService": "Kullanım Koşulları",
+        "contactUs": "İletişim",
+        "seoHeading": "Kişiselleştirilmiş Yapay Zeka Uyku Masalları",
         "login": "Giriş Yap",
         "signup": "Üye Ol",
-        "logout": "Çıkış Yap"
+        "logout": "Çıkış Yap",
+        "faq": {
+            "title": "Sıkça Sorulan Sorular",
+            "q1": "Kidoredo nedir ve çocuklara nasıl fayda sağlar?",
+            "a1": "Kidoredo, yapay zeka destekli bir hikaye anlatıcılığı platformudur. Çocukların hayal güçlerini kullanarak kişiselleştirilmiş, eğitici ve eğlenceli hikayeler oluşturmalarına yardımcı olur. Bu süreç, çocukların okuma alışkanlığını ve yaratıcılığını geliştirir.",
+            "q2": "Yapay zeka ile oluşturulan hikayeler güvenli mi?",
+            "a2": "Evet, Kidoredo'da güvenlik önceliğimizdir. Hikaye üretim sürecinde gelişmiş filtreleme sistemleri kullanarak, içeriklerin tamamen çocuk dostu ve pedagojik standartlara uygun olmasını sağlıyoruz.",
+            "q3": "Kidoredo'da kendi karakterlerimizi oluşturabilir miyiz?",
+            "a3": "Kesinlikle! Çocuklar hikayenin kahramanını, fiziksel özelliklerini ve karakter yapısını kendileri belirleyebilir, hatta kendi isimlerini hikayeye dahil edebilirler."
+        }
     },
     "GeneratePage": {
         "status_generating": "Hikayen yazılıyor...",
