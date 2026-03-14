@@ -62,7 +62,8 @@
         "resetPasswordTitle": "Réinitialiser le mot de passe",
         "sendResetLink": "Envoyer le lien",
         "backToLogin": "Retour à la connexion",
-        "resetEmailSent": "Email de réinitialisation envoyé !"
+        "resetEmailSent": "Email de réinitialisation envoyé !",
+        "freeStoryNotice": "Créer une histoire est totalement gratuit !"
     },
     "GeneratePage": {
         "status_generating": "Écriture de votre histoire...",

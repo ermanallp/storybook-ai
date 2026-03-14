@@ -79,6 +79,7 @@
         "resetPasswordTitle": "Passwort zurücksetzen",
         "sendResetLink": "Link senden",
         "backToLogin": "Zurück zum Login",
-        "resetEmailSent": "E-Mail zum Zurücksetzen gesendet!"
+        "resetEmailSent": "E-Mail zum Zurücksetzen gesendet!",
+        "freeStoryNotice": "Das Erstellen einer Geschichte ist völlig kostenlos!"
     }
 }

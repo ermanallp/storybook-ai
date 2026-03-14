@@ -79,6 +79,7 @@
         "resetPasswordTitle": "Restablecer contraseña",
         "sendResetLink": "Enviar enlace",
         "backToLogin": "Volver al inicio de sesión",
-        "resetEmailSent": "¡Correo de restablecimiento enviado!"
+        "resetEmailSent": "¡Correo de restablecimiento enviado!",
+        "freeStoryNotice": "¡Crear una historia es totalmente gratis!"
     }
 }

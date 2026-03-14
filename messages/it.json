@@ -79,6 +79,7 @@
         "resetPasswordTitle": "Reimposta password",
         "sendResetLink": "Invia link",
         "backToLogin": "Torna al login",
-        "resetEmailSent": "Email di reimpostazione inviata!"
+        "resetEmailSent": "Email di reimpostazione inviata!",
+        "freeStoryNotice": "Creare una storia è completamente gratuito!"
     }
 }

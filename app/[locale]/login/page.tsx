@@ -73,6 +73,18 @@ export default function Login() {
                 <h1 className="mb-6 text-center text-3xl font-extrabold text-white drop-shadow-md">
                     {isResettingPassword ? t('resetPasswordTitle') : t('loginTitle')}
                 </h1>
+
+                {/* Free Story Notice */}
+                {!isResettingPassword && (
+                    <div className="mb-6 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 border-l-4 border-yellow-400 p-4 rounded-r-xl shadow-sm">
+                        <p className="text-yellow-100 font-semibold text-center flex items-center justify-center gap-2">
+                            <span className="text-xl">✨</span>
+                            {t('freeStoryNotice')}
+                            <span className="text-xl">✨</span>
+                        </p>
+                    </div>
+                )}
+
                 {error && <p className="mb-4 text-center text-red-300 font-bold bg-red-500/20 p-2 rounded-lg border border-red-500/50">{error}</p>}
                 {resetMessage && <p className="mb-4 text-center text-green-300 font-bold bg-green-500/20 p-2 rounded-lg border border-green-500/50">{resetMessage}</p>}
 

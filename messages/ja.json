@@ -79,6 +79,7 @@
         "resetPasswordTitle": "パスワードのリセット",
         "sendResetLink": "リセットリンクを送信",
         "backToLogin": "ログインに戻る",
-        "resetEmailSent": "リセットメールを送信しました！"
+        "resetEmailSent": "リセットメールを送信しました！",
+        "freeStoryNotice": "物語の作成は完全無料です！"
     }
 }

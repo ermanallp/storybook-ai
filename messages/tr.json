@@ -79,6 +79,7 @@
         "resetPasswordTitle": "Şifre Sıfırlama",
         "sendResetLink": "Sıfırlama Linki Gönder",
         "backToLogin": "Girişe Dön",
-        "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!"
+        "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!",
+        "freeStoryNotice": "Hikaye oluşturmak tamamen ücretsiz!"
     }
 }

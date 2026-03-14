@@ -79,6 +79,7 @@
     "resetPasswordTitle": "Reset Password",
     "sendResetLink": "Send Reset Link",
     "backToLogin": "Back to Login",
-    "resetEmailSent": "Password reset email sent!"
+    "resetEmailSent": "Password reset email sent!",
+    "freeStoryNotice": "Creating a story is completely free!"
   }
 }
