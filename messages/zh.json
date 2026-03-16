@@ -1,9 +1,9 @@
 {
     "HomePage": {
-        "title": "个性化 AI 故事",
-        "subTitle": "Kişiselleştirilmiş Masallar",
-        "description": "创造神奇的个性化 AI 故事，让你的孩子成为英雄！",
-        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "title": "给您的孩子读独特的故事",
+        "subTitle": "给您的孩子读独特的故事",
+        "description": "只需几秒钟，即可为您创建专属的视觉故事！",
+        "descriptionSub": "只需几秒钟，即可为您创建专属的视觉故事！",
         "heroNameLabel": "英雄的名字",
         "heroNamePlaceholder": "例如：阿里",
         "ageLabel": "年龄",

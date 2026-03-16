@@ -1,9 +1,9 @@
 {
     "HomePage": {
-        "title": "パーソナライズされたAIストーリー",
-        "subTitle": "Kişiselleştirilmiş Masallar",
-        "description": "お子様が主人公になる魔法のようなパーソナライズされたAIストーリーを作成しましょう！",
-        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "title": "お子様にユニークな物語を読んであげましょう",
+        "subTitle": "お子様にユニークな物語を読んであげましょう",
+        "description": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
+        "descriptionSub": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
         "heroNameLabel": "主人公の名前",
         "heroNamePlaceholder": "例：アリ",
         "ageLabel": "年齢",

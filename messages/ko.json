@@ -1,9 +1,9 @@
 {
     "HomePage": {
-        "title": "개인 맞춤형 AI 이야기",
-        "subTitle": "Kişiselleştirilmiş Masallar",
-        "description": "아이가 주인공이 되는 마법 같은 맞춤형 AI 이야기를 만들어보세요!",
-        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "title": "우리아이에게 특별한 동화를 읽어주세요",
+        "subTitle": "우리아이에게 특별한 동화를 읽어주세요",
+        "description": "단 몇 초 만에 당신만을 위한 시각적 이야기를 만들어보세요!",
+        "descriptionSub": "단 몇 초 만에 당신만을 위한 시각적 이야기를 만들어보세요!",
         "heroNameLabel": "주인공 이름",
         "heroNamePlaceholder": "예: 알리",
         "ageLabel": "나이",

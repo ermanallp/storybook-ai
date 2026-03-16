@@ -1,9 +1,9 @@
 {
     "HomePage": {
-        "title": "Histoires IA Personnalisées",
-        "subTitle": "Kişiselleştirilmiş Masallar",
-        "description": "Créez des histoires magiques personnalisées où votre enfant est le héros !",
-        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "title": "Lisez des contes uniques à votre enfant",
+        "subTitle": "Lisez des contes uniques à votre enfant",
+        "description": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
+        "descriptionSub": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
         "heroNameLabel": "Nom du Héros",
         "heroNamePlaceholder": "ex: Kai",
         "ageLabel": "Âge",

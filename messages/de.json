@@ -1,9 +1,9 @@
 {
     "HomePage": {
-        "title": "Personalisierte KI-Geschichten",
-        "subTitle": "Kişiselleştirilmiş Masallar",
-        "description": "Erstellen Sie magische, personalisierte Geschichten, in denen Ihr Kind der Held ist!",
-        "descriptionSub": "Çocuğunuz için saniyeler içinde özel masallar yaratın!",
+        "title": "Lesen Sie Ihrem Kind einzigartige Märchen vor",
+        "subTitle": "Lesen Sie Ihrem Kind einzigartige Märchen vor",
+        "description": "Erstellen Sie in Sekundenschnelle visuelle Geschichten nur für Sie!",
+        "descriptionSub": "Erstellen Sie in Sekundenschnelle visuelle Geschichten nur für Sie!",
         "heroNameLabel": "Name des Helden",
         "heroNamePlaceholder": "z.B. Kai",
         "ageLabel": "Alter",

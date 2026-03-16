@@ -28,17 +28,17 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
 
-    if (!user) {
-      // User is not logged in, save data to localStorage and redirect to login
-      localStorage.setItem('pendingStory', JSON.stringify({
-        name,
-        age,
-        interests,
-        theme: t(`themes.${theme}`)
-      }));
-      router.push('/login');
-      return;
-    }
+    // Temporarily allow anonymous users to create stories
+    // if (!user) {
+    //   localStorage.setItem('pendingStory', JSON.stringify({
+    //     name,
+    //     age,
+    //     interests,
+    //     theme: t(`themes.${theme}`)
+    //   }));
+    //   router.push('/login');
+    //   return;
+    // }
 
     // Store data in localStorage or context to pass to the story generation page
     // For now, we'll pass it via query params or just navigate to a loading state
