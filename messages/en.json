@@ -81,5 +81,22 @@
         "backToLogin": "Back to Login",
         "resetEmailSent": "Password reset email sent!",
         "freeStoryNotice": "Creating a story is completely free!"
+    },
+    "Testimonials": [
+        {
+            "name": "Sarah M.",
+            "text": "Kidoredo turned bedtime into a magical experience! My son loves seeing his name in the stories."
+        },
+        {
+            "name": "David L.",
+            "text": "The illustrations are beautiful and the stories are so creative. Highly recommended!"
+        },
+        {
+            "name": "Emma R.",
+            "text": "We read a new story every night. It's amazing how personalized it gets!"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "Verified Parent"
     }
 }

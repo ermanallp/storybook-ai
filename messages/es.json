@@ -81,5 +81,22 @@
         "backToLogin": "Volver al inicio de sesión",
         "resetEmailSent": "¡Correo de restablecimiento enviado!",
         "freeStoryNotice": "¡Crear una historia es totalmente gratis!"
+    },
+    "Testimonials": [
+        {
+            "name": "Sarah M.",
+            "text": "¡Kidoredo convirtió la hora de dormir en una experiencia mágica! A mi hijo le encanta ver su nombre en los cuentos."
+        },
+        {
+            "name": "David L.",
+            "text": "Las ilustraciones son hermosas y las historias son tan creativas. ¡Muy recomendable!"
+        },
+        {
+            "name": "Emma R.",
+            "text": "Leemos un cuento nuevo cada noche. ¡Es increíble lo personalizado que es!"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "Padre verificado"
     }
 }

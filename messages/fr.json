@@ -81,5 +81,22 @@
         "title": "Kidoredo : Histoires du soir personnalisées par IA pour enfants",
         "description": "Créez des histoires magiques et personnalisées où votre enfant est le héros ! Stimulez sa créativité et rendez le coucher amusant avec Kidoredo. Essai gratuit.",
         "keywords": "Histoires IA personnalisées, Livres enfants personnalisés, Histoires du soir IA, Histoires pour enfants, Générateur d'histoires, Histoires en ligne"
+    },
+    "Testimonials": [
+        {
+            "name": "Sarah M.",
+            "text": "Kidoredo a transformé l'heure du coucher en une expérience magique ! Mon fils adore voir son nom dans les histoires."
+        },
+        {
+            "name": "David L.",
+            "text": "Les illustrations sont magnifiques et les histoires tellement créatives. Hautement recommandé !"
+        },
+        {
+            "name": "Emma R.",
+            "text": "Nous lisons une nouvelle histoire chaque soir. C'est incroyable à quel point c'est personnalisé !"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "Parent vérifié"
     }
 }

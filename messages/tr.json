@@ -81,5 +81,22 @@
         "backToLogin": "Girişe Dön",
         "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!",
         "freeStoryNotice": "Hikaye oluşturmak tamamen ücretsiz!"
+    },
+    "Testimonials": [
+        {
+            "name": "Elif Y.",
+            "text": "Kidoredo uyku saatlerini sihirli bir deneyime çevirdi! Oğlum masallarda kendi adını görmeye bayılıyor."
+        },
+        {
+            "name": "Caner K.",
+            "text": "Çizimler harika ve hikayeler çok yaratıcı. Kesinlikle tavsiye ederim!"
+        },
+        {
+            "name": "Ayşe N.",
+            "text": "Her gece yeni bir masal okuyoruz. Bu kadar kişiselleştirilmiş olması inanılmaz!"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "Kayıtlı Ebeveyn"
     }
 }

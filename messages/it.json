@@ -81,5 +81,22 @@
         "backToLogin": "Torna al login",
         "resetEmailSent": "Email di reimpostazione inviata!",
         "freeStoryNotice": "Creare una storia è completamente gratuito!"
+    },
+    "Testimonials": [
+        {
+            "name": "Sarah M.",
+            "text": "Kidoredo ha trasformato il momento della nanna in un'esperienza magica! A mio figlio piace moltissimo vedere il suo nome nelle storie."
+        },
+        {
+            "name": "David L.",
+            "text": "Le illustrazioni sono bellissime e le storie così creative. Altamente raccomandato!"
+        },
+        {
+            "name": "Emma R.",
+            "text": "Leggiamo una nuova storia ogni sera. È incredibile quanto sia personalizzata!"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "Genitore verificato"
     }
 }

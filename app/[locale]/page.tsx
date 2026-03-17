@@ -13,6 +13,7 @@ import { useAuth } from '@/components/auth/AuthProvider';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQComponent from '@/components/FAQComponent';
+import TestimonialsComponent from '@/components/TestimonialsComponent';
 
 export default function Home() {
   const router = useRouter();
@@ -94,6 +95,11 @@ export default function Home() {
         )}
       </div>
 
+      {/* Testimonials Desktop (absolutely positioned relative to viewport) */}
+      <div className="hidden md:block absolute left-4 md:left-8 lg:left-12 xl:left-16 top-26 lg:top-34 z-20">
+        <TestimonialsComponent />
+      </div>
+
       {/* Brand Header */}
       <div className="z-10 mb-8 flex flex-col items-center" aria-hidden="true">
         <div className="text-5xl md:text-7xl font-extrabold text-white tracking-wide drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] font-[var(--font-geist-sans)]">
@@ -102,102 +108,110 @@ export default function Home() {
         <div className="h-1 w-24 bg-yellow-400 rounded-full mt-2 shadow-lg" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="w-full max-w-md bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-white/20 z-10"
-      >
-        <h2 className="text-2xl font-bold text-center mb-2 text-white drop-shadow-md">
-          {t('title')}
-        </h2>
-        <p className="text-center text-blue-50 mb-6 font-medium leading-relaxed">
-          {t('description')}
-        </p>
+      <div className="z-10 w-full max-w-7xl mx-auto flex flex-col items-center justify-center relative">
+        {/* Testimonials Mobile (normal flow below form) */}
+        <div className="w-full flex md:hidden justify-center order-2 mt-8 z-20">
+          <TestimonialsComponent />
+        </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-bold text-white mb-1 ml-1 shadow-black drop-shadow-sm">{t('heroNameLabel')}</label>
-            <input
-              type="text"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
-              placeholder={t('heroNamePlaceholder')}
-            />
-          </div>
+        {/* Main Form Center */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full max-w-md bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-white/20 z-10"
+        >
+          <h2 className="text-2xl font-bold text-center mb-2 text-white drop-shadow-md">
+            {t('title')}
+          </h2>
+          <p className="text-center text-blue-50 mb-6 font-medium leading-relaxed">
+            {t('description')}
+          </p>
 
-          <div>
-            <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('ageLabel')}</label>
-            <input
-              type="number"
-              required
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
-              placeholder={t('agePlaceholder')}
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-bold text-white mb-1 ml-1 shadow-black drop-shadow-sm">{t('heroNameLabel')}</label>
+              <input
+                type="text"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
+                placeholder={t('heroNamePlaceholder')}
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('interestsLabel')}</label>
-            <input
-              type="text"
-              required
-              value={interests}
-              onChange={(e) => setInterests(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
-              placeholder={t('interestsPlaceholder')}
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('ageLabel')}</label>
+              <input
+                type="number"
+                required
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
+                placeholder={t('agePlaceholder')}
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('themeLabel')}</label>
-            <div className="relative">
-              <select
-                value={theme}
-                onChange={(e) => setTheme(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white appearance-none cursor-pointer transition-all font-medium [&>option]:text-black"
-              >
-                <option value="macera">{t('themes.macera')}</option>
-                <option value="uzay">{t('themes.uzay')}</option>
-                <option value="deniz">{t('themes.deniz')}</option>
-                <option value="okul">{t('themes.okul')}</option>
-                <option value="sehir">{t('themes.sehir')}</option>
-                <option value="sato">{t('themes.sato')}</option>
-                <option value="superkahraman">{t('themes.superkahraman')}</option>
-                <option value="ada">{t('themes.ada')}</option>
-                <option value="ciftlik">{t('themes.ciftlik')}</option>
-                <option value="lunapark">{t('themes.lunapark')}</option>
-                <option value="kar">{t('themes.kar')}</option>
-                <option value="oyuncak">{t('themes.oyuncak')}</option>
-                <option value="seker">{t('themes.seker')}</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            <div>
+              <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('interestsLabel')}</label>
+              <input
+                type="text"
+                required
+                value={interests}
+                onChange={(e) => setInterests(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white placeholder-white/70 transition-all font-medium"
+                placeholder={t('interestsPlaceholder')}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-bold text-white mb-1 ml-1 drop-shadow-sm">{t('themeLabel')}</label>
+              <div className="relative">
+                <select
+                  value={theme}
+                  onChange={(e) => setTheme(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl bg-white/20 border-2 border-white/30 focus:outline-none focus:border-yellow-400 focus:bg-white/30 text-white appearance-none cursor-pointer transition-all font-medium [&>option]:text-black"
+                >
+                  <option value="macera">{t('themes.macera')}</option>
+                  <option value="uzay">{t('themes.uzay')}</option>
+                  <option value="deniz">{t('themes.deniz')}</option>
+                  <option value="okul">{t('themes.okul')}</option>
+                  <option value="sehir">{t('themes.sehir')}</option>
+                  <option value="sato">{t('themes.sato')}</option>
+                  <option value="superkahraman">{t('themes.superkahraman')}</option>
+                  <option value="ada">{t('themes.ada')}</option>
+                  <option value="ciftlik">{t('themes.ciftlik')}</option>
+                  <option value="lunapark">{t('themes.lunapark')}</option>
+                  <option value="kar">{t('themes.kar')}</option>
+                  <option value="oyuncak">{t('themes.oyuncak')}</option>
+                  <option value="seker">{t('themes.seker')}</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
+                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                </div>
               </div>
             </div>
-          </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="submit"
-            disabled={loading}
-            className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-extrabold py-4 rounded-xl shadow-lg border-b-4 border-blue-800 active:border-b-0 active:mt-1 flex items-center justify-center gap-2 mt-8 transition-all"
-          >
-            {loading ? (
-              t('generating')
-            ) : (
-              <>
-                <Sparkles size={24} className="fill-white" />
-                <span className="text-lg shadow-black drop-shadow-sm">{t('generateButton')}</span>
-              </>
-            )}
-          </motion.button>
-        </form>
-      </motion.div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-extrabold py-4 rounded-xl shadow-lg border-b-4 border-blue-800 active:border-b-0 active:mt-1 flex items-center justify-center gap-2 mt-8 transition-all"
+            >
+              {loading ? (
+                t('generating')
+              ) : (
+                <>
+                  <Sparkles size={24} className="fill-white" />
+                  <span className="text-lg shadow-black drop-shadow-sm">{t('generateButton')}</span>
+                </>
+              )}
+            </motion.button>
+          </form>
+        </motion.div>
+      </div>
 
       <FAQComponent />
 

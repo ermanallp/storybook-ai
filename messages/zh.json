@@ -81,5 +81,22 @@
         "backToLogin": "返回登录",
         "resetEmailSent": "重置邮件已发送！",
         "freeStoryNotice": "创建故事完全免费！"
+    },
+    "Testimonials": [
+        {
+            "name": "莎拉 M.",
+            "text": "Kidoredo 让睡前时光变成了神奇的体验！我儿子非常喜欢在故事里看到他自己的名字。"
+        },
+        {
+            "name": "大卫 L.",
+            "text": "插图很美，故事也很有创意。强烈推荐！"
+        },
+        {
+            "name": "艾玛 R.",
+            "text": "我们每天晚上都会读一个新故事。能制作得如此个性化真是太让人惊讶了！"
+        }
+    ],
+    "TestimonialsProps": {
+        "verifiedParent": "认证家长"
     }
 }
