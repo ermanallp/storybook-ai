@@ -29,17 +29,17 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
 
-    // Temporarily allow anonymous users to create stories
-    // if (!user) {
-    //   localStorage.setItem('pendingStory', JSON.stringify({
-    //     name,
-    //     age,
-    //     interests,
-    //     theme: t(`themes.${theme}`)
-    //   }));
-    //   router.push('/login');
-    //   return;
-    // }
+    // Track the click event in the background (fire-and-forget)
+    try {
+      const currentLocale = window.location.pathname.split('/')[1] || 'en';
+      fetch('/api/track-click', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ locale: currentLocale })
+      }).catch(err => console.error("Tracking background error", err));
+    } catch (e) {
+      // ignore sync errors
+    }
 
     // Store data in localStorage or context to pass to the story generation page
     // For now, we'll pass it via query params or just navigate to a loading state
