@@ -50,7 +50,7 @@ export async function POST(request: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const modelToUse = 'gemini-2.5-flash';
+        const modelToUse = 'gemini-2.0-flash';
         logToFile(`Initializing model: ${modelToUse}`);
 
         const model = genAI.getGenerativeModel({
