@@ -30,16 +30,17 @@ export default function Home() {
     setLoading(true);
 
     // Temporarily allow anonymous users to create stories
-    // if (!user) {
-    //   localStorage.setItem('pendingStory', JSON.stringify({
-    //     name,
-    //     age,
-    //     interests,
-    //     theme: t(`themes.${theme}`)
-    //   }));
-    //   router.push('/login');
-    //   return;
-    // }
+    // if (!user) { ... }
+
+    try {
+        await fetch('/api/track-click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ eventType: 'generate_click' })
+        });
+    } catch (e) {
+        console.error("Tracking failed", e);
+    }
 
     // Store data in localStorage or context to pass to the story generation page
     // For now, we'll pass it via query params or just navigate to a loading state

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter } from '../../../../navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Home, BookOpen } from 'lucide-react';
@@ -17,6 +17,20 @@ export default function ReadStory() {
     const [images, setImages] = useState<Record<number, string>>({});
     const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
     const [loadingImage, setLoadingImage] = useState(false);
+    const trackedCompletion = useRef(false);
+
+    useEffect(() => {
+        if (!story || trackedCompletion.current) return;
+        
+        if (currentPage === story.pages.length - 1) {
+            trackedCompletion.current = true;
+            fetch('/api/track-click', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ eventType: 'story_completed' })
+            }).catch(e => console.error("Completion tracking failed", e));
+        }
+    }, [currentPage, story]);
 
     useEffect(() => {
         const loadStory = async () => {
