@@ -1,102 +1,103 @@
 {
-    "HomePage": {
-        "title": "Çocuğunuza Eşsiz Masallar Okuyun",
-        "subTitle": "Personalized AI Stories",
-        "description": "Saniyeler içinde sadece size özel görsel masallar oluşturun!",
-        "descriptionSub": "Create magical AI bedtime stories in seconds.",
-        "heroNameLabel": "Kahramanın Adı",
-        "heroNamePlaceholder": "Örn: Kai",
-        "ageLabel": "Yaşı",
-        "agePlaceholder": "Örn: 5",
-        "interestsLabel": "İlgi Alanları",
-        "interestsPlaceholder": "Örn: Dinozorlar, Uzay, Futbol",
-        "themeLabel": "Hikaye Ortamı",
-        "themes": {
-            "macera": "🌳 Macera Dolu Orman",
-            "uzay": "🚀 Sonsuz Uzay",
-            "deniz": "🌊 Derin Denizler",
-            "okul": "🏫 Sihirli Okul",
-            "sehir": "🏙️ Renkli Şehir",
-            "sato": "🏰 Prenses Şatosu",
-            "superkahraman": "⚡ Süper Kahraman Üssü",
-            "ada": "🏝️ Gizemli Ada",
-            "ciftlik": "🚜 Çiftlik Hayatı",
-            "lunapark": "🎡 Lunapark Eğlencesi",
-            "kar": "❄️ Karlı Dağlar",
-            "oyuncak": "🧸 Oyuncak Fabrikası",
-            "seker": "🍬 Şeker Ülkesi"
-        },
-        "generateButton": "Hikayeyi Yarat",
-        "generating": "Sihir Hazırlanıyor...",
-        "footer": "Hikayeler Çocuğunuz ile Beraber Yaratılsın ✨",
-        "privacyPolicy": "Gizlilik Politikası",
-        "termsOfService": "Kullanım Koşulları",
-        "contactUs": "İletişim",
-        "seoHeading": "Kişiselleştirilmiş Yapay Zeka Uyku Masalları",
-        "login": "Giriş Yap",
-        "signup": "Üye Ol",
-        "logout": "Çıkış Yap",
-        "faq": {
-            "title": "Sıkça Sorulan Sorular",
-            "q1": "Kidoredo nedir ve çocuklara nasıl fayda sağlar?",
-            "a1": "Kidoredo, yapay zeka destekli bir hikaye anlatıcılığı platformudur. Çocukların hayal güçlerini kullanarak kişiselleştirilmiş, eğitici ve eğlenceli hikayeler oluşturmalarına yardımcı olur. Bu süreç, çocukların okuma alışkanlığını ve yaratıcılığını geliştirir.",
-            "q2": "Yapay zeka ile oluşturulan hikayeler güvenli mi?",
-            "a2": "Evet, Kidoredo'da güvenlik önceliğimizdir. Hikaye üretim sürecinde gelişmiş filtreleme sistemleri kullanarak, içeriklerin tamamen çocuk dostu ve pedagojik standartlara uygun olmasını sağlıyoruz.",
-            "q3": "Kidoredo'da kendi karakterlerimizi oluşturabilir miyiz?",
-            "a3": "Kesinlikle! Çocuklar hikayenin kahramanını, fiziksel özelliklerini ve karakter yapısını kendileri belirleyebilir, hatta kendi isimlerini hikayeye dahil edebilirler."
-        }
+  "HomePage": {
+    "title": "Çocuğunuza Eşsiz Masallar Okuyun",
+    "subTitle": "Personalized AI Stories",
+    "description": "Saniyeler içinde sadece size özel görsel masallar oluşturun!",
+    "descriptionSub": "Create magical AI bedtime stories in seconds.",
+    "heroNameLabel": "Kahramanın Adı",
+    "heroNamePlaceholder": "Örn: Kai",
+    "ageLabel": "Yaşı",
+    "agePlaceholder": "Örn: 5",
+    "interestsLabel": "İlgi Alanları",
+    "interestsPlaceholder": "Örn: Dinozorlar, Uzay, Futbol",
+    "themeLabel": "Hikaye Ortamı",
+    "themes": {
+      "macera": "🌳 Macera Dolu Orman",
+      "uzay": "🚀 Sonsuz Uzay",
+      "deniz": "🌊 Derin Denizler",
+      "okul": "🏫 Sihirli Okul",
+      "sehir": "🏙️ Renkli Şehir",
+      "sato": "🏰 Prenses Şatosu",
+      "superkahraman": "⚡ Süper Kahraman Üssü",
+      "ada": "🏝️ Gizemli Ada",
+      "ciftlik": "🚜 Çiftlik Hayatı",
+      "lunapark": "🎡 Lunapark Eğlencesi",
+      "kar": "❄️ Karlı Dağlar",
+      "oyuncak": "🧸 Oyuncak Fabrikası",
+      "seker": "🍬 Şeker Ülkesi",
+      "neseliev": "Neşeli Ev"
     },
-    "GeneratePage": {
-        "status_generating": "Hikayen yazılıyor...",
-        "status_magic": "{name} için sihirli bir dünya yaratılıyor...",
-        "status_images": "Resimler hazırlanıyor...",
-        "status_ready": "Hikayen hazır! Keyifli okumalar...",
-        "error_generic": "Bir hata oluştu. Lütfen tekrar dene."
-    },
-    "ReadPage": {
-        "loading_image": "Resim çiziliyor...",
-        "prev": "Önceki",
-        "next": "Sonraki"
-    },
-    "SEO": {
-        "title": "Kidoredo: Kişiselleştirilmiş Yapay Zeka Çocuk Hikayeleri",
-        "description": "Çocuğunuzun kahramanı olduğu sihirli masallar yaratın! Kidoredo ile yaratıcılığı geliştirin ve uyku saatini eğlenceli hale getirin. Ücretsiz deneyin.",
-        "keywords": "Çocuğunuza Eşsiz Masallar Okuyun, Yapay Zeka Hikaye, Çocuk Hikayeleri, Bedava Masal Oku, Eğitici Masallar, Uyku Masalları, Türkçe Çocuk Hikayeleri"
-    },
-    "Auth": {
-        "loginTitle": "Kidoredo'ya Giriş Yap",
-        "signupTitle": "Kidoredo'ya Üye Ol",
-        "email": "E-posta",
-        "password": "Şifre",
-        "name": "İsim",
-        "loginButton": "Giriş Yap",
-        "signupButton": "Üye Ol",
-        "noAccount": "Hesabın yok mu?",
-        "hasAccount": "Zaten hesabın var mı?",
-        "backToHome": "Ana Sayfaya Dön",
-        "errorGeneric": "Bir hata oluştu",
-        "forgotPassword": "Şifremi Unuttum?",
-        "resetPasswordTitle": "Şifre Sıfırlama",
-        "sendResetLink": "Sıfırlama Linki Gönder",
-        "backToLogin": "Girişe Dön",
-        "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!",
-        "freeStoryNotice": "Hikaye oluşturmak tamamen ücretsiz!"
-    },
-    "Testimonials": [
-        {
-            "name": "Elif Y.",
-            "text": "Kidoredo uyku saatlerini sihirli bir deneyime çevirdi! Oğlum masallarda kendi adını görmeye bayılıyor."
-        },
-        {
-            "name": "Caner K.",
-            "text": "Çizimler harika ve hikayeler çok yaratıcı. Kesinlikle tavsiye ederim!"
-        },
-        {
-            "name": "Ayşe N.",
-            "text": "Her gece yeni bir masal okuyoruz. Bu kadar kişiselleştirilmiş olması inanılmaz!"
-        }
-    ],
-    "TestimonialsProps": {
-        "verifiedParent": "Kayıtlı Ebeveyn"
+    "generateButton": "Hikayeyi Yarat",
+    "generating": "Sihir Hazırlanıyor...",
+    "footer": "Hikayeler Çocuğunuz ile Beraber Yaratılsın ✨",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Koşulları",
+    "contactUs": "İletişim",
+    "seoHeading": "Kişiselleştirilmiş Yapay Zeka Uyku Masalları",
+    "login": "Giriş Yap",
+    "signup": "Üye Ol",
+    "logout": "Çıkış Yap",
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "q1": "Kidoredo nedir ve çocuklara nasıl fayda sağlar?",
+      "a1": "Kidoredo, yapay zeka destekli bir hikaye anlatıcılığı platformudur. Çocukların hayal güçlerini kullanarak kişiselleştirilmiş, eğitici ve eğlenceli hikayeler oluşturmalarına yardımcı olur. Bu süreç, çocukların okuma alışkanlığını ve yaratıcılığını geliştirir.",
+      "q2": "Yapay zeka ile oluşturulan hikayeler güvenli mi?",
+      "a2": "Evet, Kidoredo'da güvenlik önceliğimizdir. Hikaye üretim sürecinde gelişmiş filtreleme sistemleri kullanarak, içeriklerin tamamen çocuk dostu ve pedagojik standartlara uygun olmasını sağlıyoruz.",
+      "q3": "Kidoredo'da kendi karakterlerimizi oluşturabilir miyiz?",
+      "a3": "Kesinlikle! Çocuklar hikayenin kahramanını, fiziksel özelliklerini ve karakter yapısını kendileri belirleyebilir, hatta kendi isimlerini hikayeye dahil edebilirler."
     }
+  },
+  "GeneratePage": {
+    "status_generating": "Hikayen yazılıyor...",
+    "status_magic": "{name} için sihirli bir dünya yaratılıyor...",
+    "status_images": "Resimler hazırlanıyor...",
+    "status_ready": "Hikayen hazır! Keyifli okumalar...",
+    "error_generic": "Bir hata oluştu. Lütfen tekrar dene."
+  },
+  "ReadPage": {
+    "loading_image": "Resim çiziliyor...",
+    "prev": "Önceki",
+    "next": "Sonraki"
+  },
+  "SEO": {
+    "title": "Kidoredo: Kişiselleştirilmiş Yapay Zeka Çocuk Hikayeleri",
+    "description": "Çocuğunuzun kahramanı olduğu sihirli masallar yaratın! Kidoredo ile yaratıcılığı geliştirin ve uyku saatini eğlenceli hale getirin. Ücretsiz deneyin.",
+    "keywords": "Çocuğunuza Eşsiz Masallar Okuyun, Yapay Zeka Hikaye, Çocuk Hikayeleri, Bedava Masal Oku, Eğitici Masallar, Uyku Masalları, Türkçe Çocuk Hikayeleri"
+  },
+  "Auth": {
+    "loginTitle": "Kidoredo'ya Giriş Yap",
+    "signupTitle": "Kidoredo'ya Üye Ol",
+    "email": "E-posta",
+    "password": "Şifre",
+    "name": "İsim",
+    "loginButton": "Giriş Yap",
+    "signupButton": "Üye Ol",
+    "noAccount": "Hesabın yok mu?",
+    "hasAccount": "Zaten hesabın var mı?",
+    "backToHome": "Ana Sayfaya Dön",
+    "errorGeneric": "Bir hata oluştu",
+    "forgotPassword": "Şifremi Unuttum?",
+    "resetPasswordTitle": "Şifre Sıfırlama",
+    "sendResetLink": "Sıfırlama Linki Gönder",
+    "backToLogin": "Girişe Dön",
+    "resetEmailSent": "Şifre sıfırlama e-postası gönderildi!",
+    "freeStoryNotice": "Hikaye oluşturmak tamamen ücretsiz!"
+  },
+  "Testimonials": [
+    {
+      "name": "Elif Y.",
+      "text": "Kidoredo uyku saatlerini sihirli bir deneyime çevirdi! Oğlum masallarda kendi adını görmeye bayılıyor."
+    },
+    {
+      "name": "Caner K.",
+      "text": "Çizimler harika ve hikayeler çok yaratıcı. Kesinlikle tavsiye ederim!"
+    },
+    {
+      "name": "Ayşe N.",
+      "text": "Her gece yeni bir masal okuyoruz. Bu kadar kişiselleştirilmiş olması inanılmaz!"
+    }
+  ],
+  "TestimonialsProps": {
+    "verifiedParent": "Kayıtlı Ebeveyn"
+  }
 }

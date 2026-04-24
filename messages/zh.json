@@ -1,102 +1,103 @@
 {
-    "HomePage": {
-        "title": "给您的孩子读独特的故事",
-        "subTitle": "给您的孩子读独特的故事",
-        "description": "只需几秒钟，即可为您创建专属的视觉故事！",
-        "descriptionSub": "只需几秒钟，即可为您创建专属的视觉故事！",
-        "heroNameLabel": "英雄的名字",
-        "heroNamePlaceholder": "例如：阿里",
-        "ageLabel": "年龄",
-        "agePlaceholder": "例如：5",
-        "interestsLabel": "兴趣",
-        "interestsPlaceholder": "例如：恐龙，太空，足球",
-        "themeLabel": "故事背景",
-        "themes": {
-            "macera": "🌳 冒险森林",
-            "uzay": "🚀 无尽太空",
-            "deniz": "🌊 深海",
-            "okul": "🏫 魔法学校",
-            "sehir": "🏙️ 多彩城市",
-            "sato": "🏰 公主城堡",
-            "superkahraman": "⚡ 超级英雄基地",
-            "ada": "🏝️ 神秘岛屿",
-            "ciftlik": "🚜 农场生活",
-            "lunapark": "🎡 游乐园",
-            "kar": "❄️ 雪山",
-            "oyuncak": "🧸 玩具工厂",
-            "seker": "🍬 糖果乐园"
-        },
-        "generateButton": "生成故事",
-        "generating": "正在施展魔法...",
-        "footer": "与您的孩子一起创作故事 ✨",
-        "login": "登录",
-        "signup": "注册",
-        "logout": "登出",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
-        "contactUs": "Contact Us",
-        "seoHeading": "Personalized AI Bedtime Stories",
-        "faq": {
-            "title": "Frequently Asked Questions",
-            "q1": "What is Kidoredo and how does it benefit children?",
-            "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
-            "q2": "Are AI-generated stories safe?",
-            "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
-            "q3": "Can we create our own characters in Kidoredo?",
-            "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
-        }
+  "HomePage": {
+    "title": "给您的孩子读独特的故事",
+    "subTitle": "给您的孩子读独特的故事",
+    "description": "只需几秒钟，即可为您创建专属的视觉故事！",
+    "descriptionSub": "只需几秒钟，即可为您创建专属的视觉故事！",
+    "heroNameLabel": "英雄的名字",
+    "heroNamePlaceholder": "例如：阿里",
+    "ageLabel": "年龄",
+    "agePlaceholder": "例如：5",
+    "interestsLabel": "兴趣",
+    "interestsPlaceholder": "例如：恐龙，太空，足球",
+    "themeLabel": "故事背景",
+    "themes": {
+      "macera": "🌳 冒险森林",
+      "uzay": "🚀 无尽太空",
+      "deniz": "🌊 深海",
+      "okul": "🏫 魔法学校",
+      "sehir": "🏙️ 多彩城市",
+      "sato": "🏰 公主城堡",
+      "superkahraman": "⚡ 超级英雄基地",
+      "ada": "🏝️ 神秘岛屿",
+      "ciftlik": "🚜 农场生活",
+      "lunapark": "🎡 游乐园",
+      "kar": "❄️ 雪山",
+      "oyuncak": "🧸 玩具工厂",
+      "seker": "🍬 糖果乐园",
+      "neseliev": "欢乐屋"
     },
-    "GeneratePage": {
-        "status_generating": "正在编写您的故事...",
-        "status_magic": "正在为 {name} 创造魔法世界...",
-        "status_images": "正在准备图片...",
-        "status_ready": "您的故事准备好了！祝您阅读愉快...",
-        "error_generic": "发生错误。请重试。"
-    },
-    "ReadPage": {
-        "loading_image": "正在绘制图片...",
-        "prev": "上一页",
-        "next": "下一页"
-    },
-    "SEO": {
-        "title": "Kidoredo：儿童个性化 AI 睡前故事",
-        "description": "创造神奇的个性化 AI 故事，让你的孩子成为英雄！通过 Kidoredo 的定制书籍激发创造力，让睡前时光变得有趣。免费试用。",
-        "keywords": "个性化 AI 故事, 定制儿童书籍, AI 睡前故事, 儿童故事, 故事生成器, 在线睡前故事"
-    },
-    "Auth": {
-        "loginTitle": "登录 Kidoredo",
-        "signupTitle": "注册 Kidoredo",
-        "email": "邮箱",
-        "password": "密码",
-        "name": "姓名",
-        "loginButton": "登录",
-        "signupButton": "注册",
-        "noAccount": "没有账号？",
-        "hasAccount": "已有账号？",
-        "backToHome": "返回首页",
-        "errorGeneric": "发生错误",
-        "forgotPassword": "忘记密码？",
-        "resetPasswordTitle": "重置密码",
-        "sendResetLink": "发送重置链接",
-        "backToLogin": "返回登录",
-        "resetEmailSent": "重置邮件已发送！",
-        "freeStoryNotice": "创建故事完全免费！"
-    },
-    "Testimonials": [
-        {
-            "name": "莎拉 M.",
-            "text": "Kidoredo 让睡前时光变成了神奇的体验！我儿子非常喜欢在故事里看到他自己的名字。"
-        },
-        {
-            "name": "大卫 L.",
-            "text": "插图很美，故事也很有创意。强烈推荐！"
-        },
-        {
-            "name": "艾玛 R.",
-            "text": "我们每天晚上都会读一个新故事。能制作得如此个性化真是太让人惊讶了！"
-        }
-    ],
-    "TestimonialsProps": {
-        "verifiedParent": "认证家长"
+    "generateButton": "生成故事",
+    "generating": "正在施展魔法...",
+    "footer": "与您的孩子一起创作故事 ✨",
+    "login": "登录",
+    "signup": "注册",
+    "logout": "登出",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us",
+    "seoHeading": "Personalized AI Bedtime Stories",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What is Kidoredo and how does it benefit children?",
+      "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
+      "q2": "Are AI-generated stories safe?",
+      "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
+      "q3": "Can we create our own characters in Kidoredo?",
+      "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
     }
+  },
+  "GeneratePage": {
+    "status_generating": "正在编写您的故事...",
+    "status_magic": "正在为 {name} 创造魔法世界...",
+    "status_images": "正在准备图片...",
+    "status_ready": "您的故事准备好了！祝您阅读愉快...",
+    "error_generic": "发生错误。请重试。"
+  },
+  "ReadPage": {
+    "loading_image": "正在绘制图片...",
+    "prev": "上一页",
+    "next": "下一页"
+  },
+  "SEO": {
+    "title": "Kidoredo：儿童个性化 AI 睡前故事",
+    "description": "创造神奇的个性化 AI 故事，让你的孩子成为英雄！通过 Kidoredo 的定制书籍激发创造力，让睡前时光变得有趣。免费试用。",
+    "keywords": "个性化 AI 故事, 定制儿童书籍, AI 睡前故事, 儿童故事, 故事生成器, 在线睡前故事"
+  },
+  "Auth": {
+    "loginTitle": "登录 Kidoredo",
+    "signupTitle": "注册 Kidoredo",
+    "email": "邮箱",
+    "password": "密码",
+    "name": "姓名",
+    "loginButton": "登录",
+    "signupButton": "注册",
+    "noAccount": "没有账号？",
+    "hasAccount": "已有账号？",
+    "backToHome": "返回首页",
+    "errorGeneric": "发生错误",
+    "forgotPassword": "忘记密码？",
+    "resetPasswordTitle": "重置密码",
+    "sendResetLink": "发送重置链接",
+    "backToLogin": "返回登录",
+    "resetEmailSent": "重置邮件已发送！",
+    "freeStoryNotice": "创建故事完全免费！"
+  },
+  "Testimonials": [
+    {
+      "name": "莎拉 M.",
+      "text": "Kidoredo 让睡前时光变成了神奇的体验！我儿子非常喜欢在故事里看到他自己的名字。"
+    },
+    {
+      "name": "大卫 L.",
+      "text": "插图很美，故事也很有创意。强烈推荐！"
+    },
+    {
+      "name": "艾玛 R.",
+      "text": "我们每天晚上都会读一个新故事。能制作得如此个性化真是太让人惊讶了！"
+    }
+  ],
+  "TestimonialsProps": {
+    "verifiedParent": "认证家长"
+  }
 }

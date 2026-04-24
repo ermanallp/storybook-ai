@@ -58,7 +58,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center px-4 pb-4 pt-24 sm:p-4 overflow-hidden">
+    <main className="min-h-screen relative flex flex-col items-center justify-start md:justify-center px-4 pb-12 pt-24 sm:p-4 overflow-x-hidden overflow-y-auto">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Testimonials Desktop (absolutely positioned relative to viewport) */}
-      <div className="hidden md:block absolute left-4 md:left-8 lg:left-12 xl:left-16 top-26 lg:top-34 z-20">
+      <div className="hidden xl:block absolute xl:left-8 2xl:left-16 top-26 lg:top-34 z-20">
         <TestimonialsComponent />
       </div>
 
@@ -109,8 +109,8 @@ export default function Home() {
       </div>
 
       <div className="z-10 w-full max-w-7xl mx-auto flex flex-col items-center justify-center relative">
-        {/* Testimonials Mobile (normal flow below form) */}
-        <div className="w-full flex md:hidden justify-center order-2 mt-8 z-20">
+        {/* Testimonials Mobile & Tablet (normal flow below form) */}
+        <div className="w-full flex xl:hidden justify-center order-2 mt-16 md:mt-24 mb-16 z-20">
           <TestimonialsComponent />
         </div>
 
@@ -186,6 +186,7 @@ export default function Home() {
                   <option value="kar">{t('themes.kar')}</option>
                   <option value="oyuncak">{t('themes.oyuncak')}</option>
                   <option value="seker">{t('themes.seker')}</option>
+                  <option value="neseliev">{t('themes.neseliev')}</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
                   <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>

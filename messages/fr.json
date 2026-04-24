@@ -1,102 +1,103 @@
 {
-    "HomePage": {
-        "title": "Lisez des contes uniques à votre enfant",
-        "subTitle": "Lisez des contes uniques à votre enfant",
-        "description": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
-        "descriptionSub": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
-        "heroNameLabel": "Nom du Héros",
-        "heroNamePlaceholder": "ex: Kai",
-        "ageLabel": "Âge",
-        "agePlaceholder": "ex: 5",
-        "interestsLabel": "Intérêts",
-        "interestsPlaceholder": "ex: Dinosaures, Espace, Football",
-        "themeLabel": "Cadre de l'Histoire",
-        "themes": {
-            "macera": "🌳 Forêt d'Aventure",
-            "uzay": "🚀 Espace Infini",
-            "deniz": "🌊 Mer Profonde",
-            "okul": "🏫 École Magique",
-            "sehir": "🏙️ Ville Colorée",
-            "sato": "🏰 Château de Princesse",
-            "superkahraman": "⚡ Base de Super-héros",
-            "ada": "🏝️ Île Mystérieuse",
-            "ciftlik": "🚜 Vie à la Ferme",
-            "lunapark": "🎡 Parc d'Attractions",
-            "kar": "❄️ Montagnes Enneigées",
-            "oyuncak": "🧸 Usine de Jouets",
-            "seker": "🍬 Pays des Bonbons"
-        },
-        "generateButton": "Créer l'Histoire",
-        "generating": "La magie opère...",
-        "footer": "Histoires créées ensemble avec votre enfant ✨",
-        "login": "Se connecter",
-        "signup": "S'inscrire",
-        "logout": "Se déconnecter",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
-        "contactUs": "Contact Us",
-        "seoHeading": "Personalized AI Bedtime Stories",
-        "faq": {
-            "title": "Frequently Asked Questions",
-            "q1": "What is Kidoredo and how does it benefit children?",
-            "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
-            "q2": "Are AI-generated stories safe?",
-            "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
-            "q3": "Can we create our own characters in Kidoredo?",
-            "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
-        }
+  "HomePage": {
+    "title": "Lisez des contes uniques à votre enfant",
+    "subTitle": "Lisez des contes uniques à votre enfant",
+    "description": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
+    "descriptionSub": "Créez des histoires visuelles rien que pour vous en quelques secondes !",
+    "heroNameLabel": "Nom du Héros",
+    "heroNamePlaceholder": "ex: Kai",
+    "ageLabel": "Âge",
+    "agePlaceholder": "ex: 5",
+    "interestsLabel": "Intérêts",
+    "interestsPlaceholder": "ex: Dinosaures, Espace, Football",
+    "themeLabel": "Cadre de l'Histoire",
+    "themes": {
+      "macera": "🌳 Forêt d'Aventure",
+      "uzay": "🚀 Espace Infini",
+      "deniz": "🌊 Mer Profonde",
+      "okul": "🏫 École Magique",
+      "sehir": "🏙️ Ville Colorée",
+      "sato": "🏰 Château de Princesse",
+      "superkahraman": "⚡ Base de Super-héros",
+      "ada": "🏝️ Île Mystérieuse",
+      "ciftlik": "🚜 Vie à la Ferme",
+      "lunapark": "🎡 Parc d'Attractions",
+      "kar": "❄️ Montagnes Enneigées",
+      "oyuncak": "🧸 Usine de Jouets",
+      "seker": "🍬 Pays des Bonbons",
+      "neseliev": "Maison Amusante"
     },
-    "Auth": {
-        "loginTitle": "Se connecter à Kidoredo",
-        "signupTitle": "S'inscrire à Kidoredo",
-        "email": "Email",
-        "password": "Mot de passe",
-        "name": "Nom",
-        "loginButton": "Se connecter",
-        "signupButton": "S'inscrire",
-        "noAccount": "Pas de compte ?",
-        "hasAccount": "Vous avez déjà un compte ?",
-        "backToHome": "Retour à l'accueil",
-        "errorGeneric": "Une erreur est survenue",
-        "forgotPassword": "Mot de passe oublié ?",
-        "resetPasswordTitle": "Réinitialiser le mot de passe",
-        "sendResetLink": "Envoyer le lien",
-        "backToLogin": "Retour à la connexion",
-        "resetEmailSent": "Email de réinitialisation envoyé !",
-        "freeStoryNotice": "Créer une histoire est totalement gratuit !"
-    },
-    "GeneratePage": {
-        "status_generating": "Écriture de votre histoire...",
-        "status_magic": "Création d'un monde magique pour {name}...",
-        "status_images": "Préparation des images...",
-        "status_ready": "Votre histoire est prête ! Bonne lecture...",
-        "error_generic": "Une erreur s'est produite. Veuillez réessayer."
-    },
-    "ReadPage": {
-        "loading_image": "Peinture de l'image...",
-        "prev": "Précédent",
-        "next": "Suivant"
-    },
-    "SEO": {
-        "title": "Kidoredo : Histoires du soir personnalisées par IA pour enfants",
-        "description": "Créez des histoires magiques et personnalisées où votre enfant est le héros ! Stimulez sa créativité et rendez le coucher amusant avec Kidoredo. Essai gratuit.",
-        "keywords": "Histoires IA personnalisées, Livres enfants personnalisés, Histoires du soir IA, Histoires pour enfants, Générateur d'histoires, Histoires en ligne"
-    },
-    "Testimonials": [
-        {
-            "name": "Sarah M.",
-            "text": "Kidoredo a transformé l'heure du coucher en une expérience magique ! Mon fils adore voir son nom dans les histoires."
-        },
-        {
-            "name": "David L.",
-            "text": "Les illustrations sont magnifiques et les histoires tellement créatives. Hautement recommandé !"
-        },
-        {
-            "name": "Emma R.",
-            "text": "Nous lisons une nouvelle histoire chaque soir. C'est incroyable à quel point c'est personnalisé !"
-        }
-    ],
-    "TestimonialsProps": {
-        "verifiedParent": "Parent vérifié"
+    "generateButton": "Créer l'Histoire",
+    "generating": "La magie opère...",
+    "footer": "Histoires créées ensemble avec votre enfant ✨",
+    "login": "Se connecter",
+    "signup": "S'inscrire",
+    "logout": "Se déconnecter",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us",
+    "seoHeading": "Personalized AI Bedtime Stories",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What is Kidoredo and how does it benefit children?",
+      "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
+      "q2": "Are AI-generated stories safe?",
+      "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
+      "q3": "Can we create our own characters in Kidoredo?",
+      "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
     }
+  },
+  "Auth": {
+    "loginTitle": "Se connecter à Kidoredo",
+    "signupTitle": "S'inscrire à Kidoredo",
+    "email": "Email",
+    "password": "Mot de passe",
+    "name": "Nom",
+    "loginButton": "Se connecter",
+    "signupButton": "S'inscrire",
+    "noAccount": "Pas de compte ?",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "backToHome": "Retour à l'accueil",
+    "errorGeneric": "Une erreur est survenue",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resetPasswordTitle": "Réinitialiser le mot de passe",
+    "sendResetLink": "Envoyer le lien",
+    "backToLogin": "Retour à la connexion",
+    "resetEmailSent": "Email de réinitialisation envoyé !",
+    "freeStoryNotice": "Créer une histoire est totalement gratuit !"
+  },
+  "GeneratePage": {
+    "status_generating": "Écriture de votre histoire...",
+    "status_magic": "Création d'un monde magique pour {name}...",
+    "status_images": "Préparation des images...",
+    "status_ready": "Votre histoire est prête ! Bonne lecture...",
+    "error_generic": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "ReadPage": {
+    "loading_image": "Peinture de l'image...",
+    "prev": "Précédent",
+    "next": "Suivant"
+  },
+  "SEO": {
+    "title": "Kidoredo : Histoires du soir personnalisées par IA pour enfants",
+    "description": "Créez des histoires magiques et personnalisées où votre enfant est le héros ! Stimulez sa créativité et rendez le coucher amusant avec Kidoredo. Essai gratuit.",
+    "keywords": "Histoires IA personnalisées, Livres enfants personnalisés, Histoires du soir IA, Histoires pour enfants, Générateur d'histoires, Histoires en ligne"
+  },
+  "Testimonials": [
+    {
+      "name": "Sarah M.",
+      "text": "Kidoredo a transformé l'heure du coucher en une expérience magique ! Mon fils adore voir son nom dans les histoires."
+    },
+    {
+      "name": "David L.",
+      "text": "Les illustrations sont magnifiques et les histoires tellement créatives. Hautement recommandé !"
+    },
+    {
+      "name": "Emma R.",
+      "text": "Nous lisons une nouvelle histoire chaque soir. C'est incroyable à quel point c'est personnalisé !"
+    }
+  ],
+  "TestimonialsProps": {
+    "verifiedParent": "Parent vérifié"
+  }
 }

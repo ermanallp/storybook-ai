@@ -1,102 +1,103 @@
 {
-    "HomePage": {
-        "title": "Lee cuentos únicos a tu hijo",
-        "subTitle": "Lee cuentos únicos a tu hijo",
-        "description": "¡Crea cuentos visuales solo para ti en segundos!",
-        "descriptionSub": "¡Crea cuentos visuales solo para ti en segundos!",
-        "heroNameLabel": "Nombre del Héroe",
-        "heroNamePlaceholder": "ej. Kai",
-        "ageLabel": "Edad",
-        "agePlaceholder": "ej. 5",
-        "interestsLabel": "Intereses",
-        "interestsPlaceholder": "ej. Dinosaurios, Espacio, Fútbol",
-        "themeLabel": "Escenario de la Historia",
-        "themes": {
-            "macera": "🌳 Bosque de Aventuras",
-            "uzay": "🚀 Espacio Infinito",
-            "deniz": "🌊 Mar Profundo",
-            "okul": "🏫 Escuela Mágica",
-            "sehir": "🏙️ Ciudad Colorida",
-            "sato": "🏰 Castillo de Princesa",
-            "superkahraman": "⚡ Base de Superhéroes",
-            "ada": "🏝️ Isla Misteriosa",
-            "ciftlik": "🚜 Vida en la Granja",
-            "lunapark": "🎡 Parque de Atracciones",
-            "kar": "❄️ Montañas Nevadas",
-            "oyuncak": "🧸 Fábrica de Juguetes",
-            "seker": "🍬 Tierra de Dulces"
-        },
-        "generateButton": "Crear Historia",
-        "generating": "Creando magia...",
-        "footer": "Historias creadas junto con tu hijo ✨",
-        "login": "Iniciar sesión",
-        "signup": "Registrarse",
-        "logout": "Cerrar sesión",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
-        "contactUs": "Contact Us",
-        "seoHeading": "Personalized AI Bedtime Stories",
-        "faq": {
-            "title": "Frequently Asked Questions",
-            "q1": "What is Kidoredo and how does it benefit children?",
-            "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
-            "q2": "Are AI-generated stories safe?",
-            "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
-            "q3": "Can we create our own characters in Kidoredo?",
-            "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
-        }
+  "HomePage": {
+    "title": "Lee cuentos únicos a tu hijo",
+    "subTitle": "Lee cuentos únicos a tu hijo",
+    "description": "¡Crea cuentos visuales solo para ti en segundos!",
+    "descriptionSub": "¡Crea cuentos visuales solo para ti en segundos!",
+    "heroNameLabel": "Nombre del Héroe",
+    "heroNamePlaceholder": "ej. Kai",
+    "ageLabel": "Edad",
+    "agePlaceholder": "ej. 5",
+    "interestsLabel": "Intereses",
+    "interestsPlaceholder": "ej. Dinosaurios, Espacio, Fútbol",
+    "themeLabel": "Escenario de la Historia",
+    "themes": {
+      "macera": "🌳 Bosque de Aventuras",
+      "uzay": "🚀 Espacio Infinito",
+      "deniz": "🌊 Mar Profundo",
+      "okul": "🏫 Escuela Mágica",
+      "sehir": "🏙️ Ciudad Colorida",
+      "sato": "🏰 Castillo de Princesa",
+      "superkahraman": "⚡ Base de Superhéroes",
+      "ada": "🏝️ Isla Misteriosa",
+      "ciftlik": "🚜 Vida en la Granja",
+      "lunapark": "🎡 Parque de Atracciones",
+      "kar": "❄️ Montañas Nevadas",
+      "oyuncak": "🧸 Fábrica de Juguetes",
+      "seker": "🍬 Tierra de Dulces",
+      "neseliev": "Casa Divertida"
     },
-    "GeneratePage": {
-        "status_generating": "Escribiendo tu historia...",
-        "status_magic": "Creando un mundo mágico para {name}...",
-        "status_images": "Preparando imágenes...",
-        "status_ready": "¡Tu historia está lista! Disfruta la lectura...",
-        "error_generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
-    },
-    "ReadPage": {
-        "loading_image": "Pintando la imagen...",
-        "prev": "Anterior",
-        "next": "Siguiente"
-    },
-    "SEO": {
-        "title": "Kidoredo: Cuentos de buenas noches personalizados con IA para niños",
-        "description": "¡Crea cuentos mágicos y personalizados con IA donde tu hijo es el héroe! Fomenta la creatividad y haz que la hora de dormir sea divertida con Kidoredo. Pruébalo gratis.",
-        "keywords": "Cuentos IA personalizados, Libros infantiles personalizados, Cuentos de buenas noches IA, Historias para niños, Generador de cuentos, Cuentos online"
-    },
-    "Auth": {
-        "loginTitle": "Iniciar sesión en Kidoredo",
-        "signupTitle": "Regístrate en Kidoredo",
-        "email": "Correo electrónico",
-        "password": "Contraseña",
-        "name": "Nombre",
-        "loginButton": "Iniciar sesión",
-        "signupButton": "Regístrate",
-        "noAccount": "¿No tienes una cuenta?",
-        "hasAccount": "¿Ya tienes una cuenta?",
-        "backToHome": "Volver al inicio",
-        "errorGeneric": "Ocurrió un error",
-        "forgotPassword": "¿Olvidaste tu contraseña?",
-        "resetPasswordTitle": "Restablecer contraseña",
-        "sendResetLink": "Enviar enlace",
-        "backToLogin": "Volver al inicio de sesión",
-        "resetEmailSent": "¡Correo de restablecimiento enviado!",
-        "freeStoryNotice": "¡Crear una historia es totalmente gratis!"
-    },
-    "Testimonials": [
-        {
-            "name": "Sarah M.",
-            "text": "¡Kidoredo convirtió la hora de dormir en una experiencia mágica! A mi hijo le encanta ver su nombre en los cuentos."
-        },
-        {
-            "name": "David L.",
-            "text": "Las ilustraciones son hermosas y las historias son tan creativas. ¡Muy recomendable!"
-        },
-        {
-            "name": "Emma R.",
-            "text": "Leemos un cuento nuevo cada noche. ¡Es increíble lo personalizado que es!"
-        }
-    ],
-    "TestimonialsProps": {
-        "verifiedParent": "Padre verificado"
+    "generateButton": "Crear Historia",
+    "generating": "Creando magia...",
+    "footer": "Historias creadas junto con tu hijo ✨",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar sesión",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us",
+    "seoHeading": "Personalized AI Bedtime Stories",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What is Kidoredo and how does it benefit children?",
+      "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
+      "q2": "Are AI-generated stories safe?",
+      "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
+      "q3": "Can we create our own characters in Kidoredo?",
+      "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
     }
+  },
+  "GeneratePage": {
+    "status_generating": "Escribiendo tu historia...",
+    "status_magic": "Creando un mundo mágico para {name}...",
+    "status_images": "Preparando imágenes...",
+    "status_ready": "¡Tu historia está lista! Disfruta la lectura...",
+    "error_generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+  },
+  "ReadPage": {
+    "loading_image": "Pintando la imagen...",
+    "prev": "Anterior",
+    "next": "Siguiente"
+  },
+  "SEO": {
+    "title": "Kidoredo: Cuentos de buenas noches personalizados con IA para niños",
+    "description": "¡Crea cuentos mágicos y personalizados con IA donde tu hijo es el héroe! Fomenta la creatividad y haz que la hora de dormir sea divertida con Kidoredo. Pruébalo gratis.",
+    "keywords": "Cuentos IA personalizados, Libros infantiles personalizados, Cuentos de buenas noches IA, Historias para niños, Generador de cuentos, Cuentos online"
+  },
+  "Auth": {
+    "loginTitle": "Iniciar sesión en Kidoredo",
+    "signupTitle": "Regístrate en Kidoredo",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "loginButton": "Iniciar sesión",
+    "signupButton": "Regístrate",
+    "noAccount": "¿No tienes una cuenta?",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "backToHome": "Volver al inicio",
+    "errorGeneric": "Ocurrió un error",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPasswordTitle": "Restablecer contraseña",
+    "sendResetLink": "Enviar enlace",
+    "backToLogin": "Volver al inicio de sesión",
+    "resetEmailSent": "¡Correo de restablecimiento enviado!",
+    "freeStoryNotice": "¡Crear una historia es totalmente gratis!"
+  },
+  "Testimonials": [
+    {
+      "name": "Sarah M.",
+      "text": "¡Kidoredo convirtió la hora de dormir en una experiencia mágica! A mi hijo le encanta ver su nombre en los cuentos."
+    },
+    {
+      "name": "David L.",
+      "text": "Las ilustraciones son hermosas y las historias son tan creativas. ¡Muy recomendable!"
+    },
+    {
+      "name": "Emma R.",
+      "text": "Leemos un cuento nuevo cada noche. ¡Es increíble lo personalizado que es!"
+    }
+  ],
+  "TestimonialsProps": {
+    "verifiedParent": "Padre verificado"
+  }
 }

@@ -1,102 +1,103 @@
 {
-    "HomePage": {
-        "title": "お子様にユニークな物語を読んであげましょう",
-        "subTitle": "お子様にユニークな物語を読んであげましょう",
-        "description": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
-        "descriptionSub": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
-        "heroNameLabel": "主人公の名前",
-        "heroNamePlaceholder": "例：アリ",
-        "ageLabel": "年齢",
-        "agePlaceholder": "例：5",
-        "interestsLabel": "興味",
-        "interestsPlaceholder": "例：恐竜、宇宙、サッカー",
-        "themeLabel": "物語の設定",
-        "themes": {
-            "macera": "🌳 冒険の森",
-            "uzay": "🚀 無限の宇宙",
-            "deniz": "🌊 深い海",
-            "okul": "🏫 魔法学校",
-            "sehir": "🏙️ カラフルな街",
-            "sato": "🏰 お姫様の城",
-            "superkahraman": "⚡ スーパーヒーロー基地",
-            "ada": "🏝️ 神秘の島",
-            "ciftlik": "🚜 農場生活",
-            "lunapark": "🎡 遊園地",
-            "kar": "❄️ 雪山",
-            "oyuncak": "🧸 おもちゃ工場",
-            "seker": "🍬 キャンディランド"
-        },
-        "generateButton": "物語を作成",
-        "generating": "魔法をかけています...",
-        "footer": "お子様と一緒に物語を作りましょう ✨",
-        "login": "ログイン",
-        "signup": "登録",
-        "logout": "ログアウト",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
-        "contactUs": "Contact Us",
-        "seoHeading": "Personalized AI Bedtime Stories",
-        "faq": {
-            "title": "Frequently Asked Questions",
-            "q1": "What is Kidoredo and how does it benefit children?",
-            "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
-            "q2": "Are AI-generated stories safe?",
-            "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
-            "q3": "Can we create our own characters in Kidoredo?",
-            "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
-        }
+  "HomePage": {
+    "title": "お子様にユニークな物語を読んであげましょう",
+    "subTitle": "お子様にユニークな物語を読んであげましょう",
+    "description": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
+    "descriptionSub": "わずか数秒であなただけの視覚的な物語を作成しましょう！",
+    "heroNameLabel": "主人公の名前",
+    "heroNamePlaceholder": "例：アリ",
+    "ageLabel": "年齢",
+    "agePlaceholder": "例：5",
+    "interestsLabel": "興味",
+    "interestsPlaceholder": "例：恐竜、宇宙、サッカー",
+    "themeLabel": "物語の設定",
+    "themes": {
+      "macera": "🌳 冒険の森",
+      "uzay": "🚀 無限の宇宙",
+      "deniz": "🌊 深い海",
+      "okul": "🏫 魔法学校",
+      "sehir": "🏙️ カラフルな街",
+      "sato": "🏰 お姫様の城",
+      "superkahraman": "⚡ スーパーヒーロー基地",
+      "ada": "🏝️ 神秘の島",
+      "ciftlik": "🚜 農場生活",
+      "lunapark": "🎡 遊園地",
+      "kar": "❄️ 雪山",
+      "oyuncak": "🧸 おもちゃ工場",
+      "seker": "🍬 キャンディランド",
+      "neseliev": "楽しい家"
     },
-    "GeneratePage": {
-        "status_generating": "物語を書いています...",
-        "status_magic": "{name}のために魔法の世界を作っています...",
-        "status_images": "画像を準備中...",
-        "status_ready": "物語の準備ができました！楽しんで読んでください...",
-        "error_generic": "エラーが発生しました。もう一度お試しください。"
-    },
-    "ReadPage": {
-        "loading_image": "絵を描いています...",
-        "prev": "前へ",
-        "next": "次へ"
-    },
-    "SEO": {
-        "title": "Kidoredo: 子供向けのパーソナライズされたAI読み聞かせ",
-        "description": "お子様が主人公になる魔法のようなパーソナライズされたAIストーリーを作成しましょう！Kidoredoで創造性を育み、寝る時間を楽しくしましょう。無料でお試しください。",
-        "keywords": "パーソナライズされたAIストーリー, カスタム絵本, AI読み聞かせ, 子供向けの物語, ストーリージェネレーター, オンライン絵本"
-    },
-    "Auth": {
-        "loginTitle": "Kidoredoにログイン",
-        "signupTitle": "Kidoredoに登録",
-        "email": "メール",
-        "password": "パスワード",
-        "name": "名前",
-        "loginButton": "ログイン",
-        "signupButton": "登録",
-        "noAccount": "アカウントをお持ちでないですか？",
-        "hasAccount": "すでにアカウントをお持ちですか？",
-        "backToHome": "ホームに戻る",
-        "errorGeneric": "エラーが発生しました",
-        "forgotPassword": "パスワードをお忘れですか？",
-        "resetPasswordTitle": "パスワードのリセット",
-        "sendResetLink": "リセットリンクを送信",
-        "backToLogin": "ログインに戻る",
-        "resetEmailSent": "リセットメールを送信しました！",
-        "freeStoryNotice": "物語の作成は完全無料です！"
-    },
-    "Testimonials": [
-        {
-            "name": "サラ・M.",
-            "text": "Kidoredoのおかげで、ベッドタイムが魔法の体験になりました！息子は物語に自分の名前があるのが大好きです。"
-        },
-        {
-            "name": "デビッド・L.",
-            "text": "イラストが美しく、物語もとても創造的です。強くお勧めします！"
-        },
-        {
-            "name": "エマ・R.",
-            "text": "毎晩新しい物語を読んでいます。こんなにパーソナライズされるなんて驚きです！"
-        }
-    ],
-    "TestimonialsProps": {
-        "verifiedParent": "確認済みの保護者"
+    "generateButton": "物語を作成",
+    "generating": "魔法をかけています...",
+    "footer": "お子様と一緒に物語を作りましょう ✨",
+    "login": "ログイン",
+    "signup": "登録",
+    "logout": "ログアウト",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us",
+    "seoHeading": "Personalized AI Bedtime Stories",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What is Kidoredo and how does it benefit children?",
+      "a1": "Kidoredo is an AI-powered storytelling platform. It helps children use their imagination to create personalized, educational, and fun stories, improving reading habits and creativity.",
+      "q2": "Are AI-generated stories safe?",
+      "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
+      "q3": "Can we create our own characters in Kidoredo?",
+      "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
     }
+  },
+  "GeneratePage": {
+    "status_generating": "物語を書いています...",
+    "status_magic": "{name}のために魔法の世界を作っています...",
+    "status_images": "画像を準備中...",
+    "status_ready": "物語の準備ができました！楽しんで読んでください...",
+    "error_generic": "エラーが発生しました。もう一度お試しください。"
+  },
+  "ReadPage": {
+    "loading_image": "絵を描いています...",
+    "prev": "前へ",
+    "next": "次へ"
+  },
+  "SEO": {
+    "title": "Kidoredo: 子供向けのパーソナライズされたAI読み聞かせ",
+    "description": "お子様が主人公になる魔法のようなパーソナライズされたAIストーリーを作成しましょう！Kidoredoで創造性を育み、寝る時間を楽しくしましょう。無料でお試しください。",
+    "keywords": "パーソナライズされたAIストーリー, カスタム絵本, AI読み聞かせ, 子供向けの物語, ストーリージェネレーター, オンライン絵本"
+  },
+  "Auth": {
+    "loginTitle": "Kidoredoにログイン",
+    "signupTitle": "Kidoredoに登録",
+    "email": "メール",
+    "password": "パスワード",
+    "name": "名前",
+    "loginButton": "ログイン",
+    "signupButton": "登録",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "backToHome": "ホームに戻る",
+    "errorGeneric": "エラーが発生しました",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "resetPasswordTitle": "パスワードのリセット",
+    "sendResetLink": "リセットリンクを送信",
+    "backToLogin": "ログインに戻る",
+    "resetEmailSent": "リセットメールを送信しました！",
+    "freeStoryNotice": "物語の作成は完全無料です！"
+  },
+  "Testimonials": [
+    {
+      "name": "サラ・M.",
+      "text": "Kidoredoのおかげで、ベッドタイムが魔法の体験になりました！息子は物語に自分の名前があるのが大好きです。"
+    },
+    {
+      "name": "デビッド・L.",
+      "text": "イラストが美しく、物語もとても創造的です。強くお勧めします！"
+    },
+    {
+      "name": "エマ・R.",
+      "text": "毎晩新しい物語を読んでいます。こんなにパーソナライズされるなんて驚きです！"
+    }
+  ],
+  "TestimonialsProps": {
+    "verifiedParent": "確認済みの保護者"
+  }
 }
