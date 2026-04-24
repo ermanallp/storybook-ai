@@ -50,7 +50,7 @@ export async function POST(request: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const modelToUse = 'gemini-2.0-flash';
+        const modelToUse = 'gemini-2.5-flash-lite';
         logToFile(`Initializing model: ${modelToUse}`);
 
         const model = genAI.getGenerativeModel({
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
         - Use sensory language (sights, sounds, smells, textures) to immerse the child in the world. 
         - Build genuine anticipation and curiosity through the natural unfolding of the mystery, adventure, or emotional journey.
         - The story must feel authentic, heartwarming, and structurally sound, with a clear beginning, middle, and satisfying resolution across the 7 pages.
-        - Write noticeably longer, richer paragraphs. EXACTLY 7-9 RICH, DESCRIPTIVE SENTENCES PER PAGE (about 100-140 words per page to make it a fulfilling read).
+        - Keep the story engaging and perfectly paced for a child. CRITICAL RULE: Each page MUST contain STRICTLY BETWEEN 60 AND 85 WORDS. Do not write less than 60 words, and do not write more than 85 words.
         - Make the story educational/informative where natural, subtly teaching the child about the world, nature, friendship, or science without sounding like a textbook.
         
         CRITICAL ART GOAL: You must maintain PERFECT CHARACTER CONSISTENCY.
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
         
         2. **Storytelling**: Write an exciting, educational, and heartwarming story based on the inputs.
            - WRITE THE STORY TEXT IN: ${targetLanguage}.
-           - WRITE 7-9 RICH, ENGAGING SENTENCES PER PAGE (approx. 100-140 words per page).
+           - WORD COUNT LIMIT: You MUST write a MINIMUM of 60 words and a MAXIMUM of 85 words per page. Do not violate this rule.
            - Let the story flow beautifully and organically from one page to the next.
            - **CRITICAL: The story MUST have exactly 7 distinct pages/segments.**
         
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
             "characterDescription": "The full detailed character description in English",
             "pages": [
                 {
-                    "text": "Long, immersive paragraph with 7-9 beautifully woven sentences here (in ${targetLanguage})...",
+                    "text": "Engaging paragraph containing strictly between 60 to 85 words here (in ${targetLanguage})...",
                     "sceneAction": "Specific action and setting description for this page in English (e.g. 'laughing while swinging on a swing set in a sunny park looking at a bright blue butterfly')."
                 },
                 // ... exactly 7 page objects ...

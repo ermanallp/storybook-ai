@@ -7,19 +7,21 @@ export async function POST(request: Request) {
         // Simulate AI delay - removed as real API call will take time
         // await new Promise(resolve => setTimeout(resolve, 1000));
 
-        const apiKey = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY;
+        // Use a separate API key for images if provided, to avoid quota clashes with text generation
+        const apiKey = process.env.GEMINI_IMAGE_API_KEY || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
         if (!apiKey) {
-            console.error('API Key is missing (checked GOOGLE_API_KEY and GEMINI_API_KEY)');
-            throw new Error('GOOGLE_API_KEY or GEMINI_API_KEY is missing');
+            console.error('API Key is missing (checked GEMINI_IMAGE_API_KEY, GEMINI_API_KEY and GOOGLE_API_KEY)');
+            throw new Error('API Key is missing');
         }
 
-        // Use Nano Banana 2 (Gemini 3.1 Flash Image) via REST API
-        // Model: gemini-3.1-flash-image-preview
+        // Use Gemini 2.5 Flash Image via REST API
+        // Model: gemini-2.5-flash-image
         // We rely on the strong "Pixar style" prompt to maintain quality
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`;
 
         // The prompt already contains the style instructions from the story generator
-        const stylePrompt = prompt;
+        // We append a strong negative prompt to prevent Gemini Flash Image from adding text/letters
+        const stylePrompt = prompt + " IMPORTANT: DO NOT include any text, letters, numbers, words, watermarks, or signatures in the image. The image must be completely free of any typography or writing.";
 
         const response = await fetch(url, {
             method: 'POST',
@@ -50,21 +52,28 @@ export async function POST(request: Request) {
         let mimeType = 'image/jpeg'; // default for flash image
 
         // Handle standard Gemini API response format for image models
+        let returnedText = '';
         if (data.candidates && data.candidates.length > 0) {
             const candidate = data.candidates[0];
             
             if (candidate.content && candidate.content.parts && candidate.content.parts.length > 0) {
-                const part = candidate.content.parts[0];
-                
-                if (part.inlineData && part.inlineData.data) {
-                    base64Image = part.inlineData.data;
-                    if (part.inlineData.mimeType) {
-                        mimeType = part.inlineData.mimeType;
+                // The image might not be in the very first part (e.g. Gemini 2.5 Flash Image returns text then image)
+                for (const part of candidate.content.parts) {
+                    if (part.inlineData && part.inlineData.data) {
+                        base64Image = part.inlineData.data;
+                        if (part.inlineData.mimeType) {
+                            mimeType = part.inlineData.mimeType;
+                        }
+                        break; // Stop looking once we find the image
+                    } else if (part.text) {
+                        returnedText += part.text + ' ';
                     }
-                } else if (part.text) {
-                    // This is the safety/error case: The model returned text instead of an image
-                    console.error('Model returned text instead of an image. Text:', part.text);
-                    throw new Error(`Yapay zeka bu hikaye için görsel oluşturmayı reddetti: "${part.text.substring(0, 100)}"`);
+                }
+                
+                // If we went through all parts and found no image but did find text
+                if (!base64Image && returnedText.trim()) {
+                    console.error('Model returned text but no image. Text:', returnedText);
+                    throw new Error(`Yapay zeka görsel oluşturmak yerine yanıt verdi: "${returnedText.substring(0, 100).trim()}"`);
                 }
             }
         }
