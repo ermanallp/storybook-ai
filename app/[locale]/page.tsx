@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from '../../navigation';
 import { motion } from 'framer-motion';
 import { BookOpen, Sparkles, Star } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 
 import { signOut } from 'firebase/auth';
@@ -18,6 +18,7 @@ import TestimonialsComponent from '@/components/TestimonialsComponent';
 export default function Home() {
   const router = useRouter();
   const t = useTranslations('HomePage');
+  const locale = useLocale();
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [interests, setInterests] = useState('');
@@ -36,7 +37,7 @@ export default function Home() {
         await fetch('/api/track-click', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ eventType: 'generate_click' })
+            body: JSON.stringify({ eventType: 'generate_click', locale })
         });
     } catch (e) {
         console.error("Tracking failed", e);

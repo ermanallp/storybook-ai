@@ -50,7 +50,7 @@ export async function POST(request: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const modelToUse = 'gemini-2.5-flash-lite';
+        const modelToUse = 'gemini-2.5-flash'; // Switched to 2.5-flash (standard, not lite) for higher storytelling quality
         logToFile(`Initializing model: ${modelToUse}`);
 
         const model = genAI.getGenerativeModel({
@@ -66,7 +66,9 @@ export async function POST(request: Request) {
         INSPIRATION: Draw inspiration from the greatest children's literature classics (e.g. Roald Dahl, Maurice Sendak, Julia Donaldson).
 
         CRITICAL STORYTELLING GOALS:
+        - Wear your "Professional Children's Book Author" hat. The narrative must be captivating, perfectly suited for a 1-7 year old audience, and never bore the reader or listener.
         - Craft an organic, rich, and emotionally resonant narrative. Do not use repetitive gimmicks (like ending every page with a question).
+        - AVOID REPETITIVE SENTENCE STRUCTURES: Do not end every sentence with the same tense or suffix (e.g., in Turkish, strictly avoid ending every sentence with "-yordu", "-ediyordu" or "-du"). Mix past, present, and descriptive tenses. Use varied sentence lengths, active verbs, and descriptive language to keep the rhythm dynamic and engaging.
         - Use sensory language (sights, sounds, smells, textures) to immerse the child in the world. 
         - Build genuine anticipation and curiosity through the natural unfolding of the mystery, adventure, or emotional journey.
         - The story must feel authentic, heartwarming, and structurally sound, with a clear beginning, middle, and satisfying resolution across the 7 pages.

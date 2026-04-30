@@ -6,12 +6,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Home, BookOpen } from 'lucide-react';
 import { Story } from '@/types';
 import { getStory } from '@/app/lib/storage';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 
 export default function ReadStory() {
     const router = useRouter();
     const t = useTranslations('ReadPage');
+    const locale = useLocale();
     const [story, setStory] = useState<Story | null>(null);
     const [currentPage, setCurrentPage] = useState(0);
     const [images, setImages] = useState<Record<number, string>>({});
@@ -27,7 +28,7 @@ export default function ReadStory() {
             fetch('/api/track-click', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ eventType: 'story_completed' })
+                body: JSON.stringify({ eventType: 'story_completed', locale })
             }).catch(e => console.error("Completion tracking failed", e));
         }
     }, [currentPage, story]);

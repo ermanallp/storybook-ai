@@ -22,16 +22,20 @@ export async function POST(request: Request) {
         const db = getFirestore(app);
 
         // 1. Store a granular record
-        const trackingCol = collection(db, 'tracking_events');
-        await addDoc(trackingCol, {
-            eventType,
-            locale,
-            country,
-            city,
-            ip,
-            timestamp: serverTimestamp(),
-            userAgent: request.headers.get('user-agent') || 'Unknown'
-        });
+        try {
+            const trackingCol = collection(db, 'tracking_events');
+            await addDoc(trackingCol, {
+                eventType,
+                locale,
+                country,
+                city,
+                ip,
+                timestamp: serverTimestamp(),
+                userAgent: request.headers.get('user-agent') || 'Unknown'
+            });
+        } catch (granularError) {
+            console.error("Failed to store granular tracking record. Continuing to aggregate update.", granularError);
+        }
 
         // 2. Update aggregate stats safely
         const statsDocName = eventType === 'story_completed' ? 'completions' : 'clicks';
