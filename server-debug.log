@@ -2666,3 +2666,219 @@
 [2026-04-24T08:44:00.012Z] Raw text length 5366
 [2026-04-24T08:44:06.464Z] Gemini response received 
 [2026-04-24T08:44:06.465Z] Raw text length 5175
+[2026-04-30T08:34:01.211Z] Story generation API called 
+[2026-04-30T08:34:01.214Z] Request body received {
+  "name": "Test",
+  "age": "5",
+  "interests": "Robotlar",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-04-30T08:34:01.214Z] API Key check {
+  "exists": true
+}
+[2026-04-30T08:34:01.215Z] Initializing model: gemini-2.0-flash 
+[2026-04-30T08:34:01.216Z] Sending prompt to Gemini... 
+[2026-04-30T08:34:01.233Z] Story generation API called 
+[2026-04-30T08:34:01.234Z] Request body received {
+  "name": "Test",
+  "age": "5",
+  "interests": "Robotlar",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-04-30T08:34:01.235Z] API Key check {
+  "exists": true
+}
+[2026-04-30T08:34:01.235Z] Initializing model: gemini-2.0-flash 
+[2026-04-30T08:34:01.236Z] Sending prompt to Gemini... 
+[2026-04-30T08:34:02.720Z] CRITICAL ERROR {
+  "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+  "stack": "Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\n    at handleResponseNotOk (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14533:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14505:9)\n    at async generateContent (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14947:22)\n    at async POST (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\[root-of-the-server]__470cc2ac._.js:182:24)\n    at async AppRouteRouteModule.do (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:37789)\n    at async AppRouteRouteModule.handle (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:45045)\n    at async responseGenerator (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15863:38)\n    at async AppRouteRouteModule.handleResponse (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:187851)\n    at async handleResponse (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15925:32)\n    at async handler (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15978:13)\n    at async DevServer.renderToResponseWithComponentsImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1413:9)\n    at async DevServer.renderPageComponent (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1465:24)\n    at async DevServer.renderToResponseImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1515:32)\n    at async DevServer.pipeImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1021:25)\n    at async NextNodeServer.handleCatchallRenderRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\next-server.js:394:17)\n    at async DevServer.handleRequestImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:912:17)\n    at async C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:382:20\n    at async Span.traceAsyncFn (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\trace\\trace.js:157:20)\n    at async DevServer.handleRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:378:24)\n    at async invokeRender (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:240:21)\n    at async handleRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:436:24)\n    at async requestHandlerImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:484:13)\n    at async Server.requestListener (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\start-server.js:226:13)",
+  "details": "{\"stack\":\"Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\\n    at handleResponseNotOk (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14533:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async makeRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14505:9)\\n    at async generateContent (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14947:22)\\n    at async POST (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\[root-of-the-server]__470cc2ac._.js:182:24)\\n    at async AppRouteRouteModule.do (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:5:37789)\\n    at async AppRouteRouteModule.handle (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:5:45045)\\n    at async responseGenerator (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15863:38)\\n    at async AppRouteRouteModule.handleResponse (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:1:187851)\\n    at async handleResponse (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15925:32)\\n    at async handler (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15978:13)\\n    at async DevServer.renderToResponseWithComponentsImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1413:9)\\n    at async DevServer.renderPageComponent (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1465:24)\\n    at async DevServer.renderToResponseImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1515:32)\\n    at async DevServer.pipeImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1021:25)\\n    at async NextNodeServer.handleCatchallRenderRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\next-server.js:394:17)\\n    at async DevServer.handleRequestImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:912:17)\\n    at async C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\dev\\\\next-dev-server.js:382:20\\n    at async Span.traceAsyncFn (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\trace\\\\trace.js:157:20)\\n    at async DevServer.handleRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\dev\\\\next-dev-server.js:378:24)\\n    at async invokeRender (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:240:21)\\n    at async handleRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:436:24)\\n    at async requestHandlerImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:484:13)\\n    at async Server.requestListener (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\start-server.js:226:13)\",\"message\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\",\"status\":404,\"statusText\":\"Not Found\"}"
+}
+[2026-04-30T08:34:02.734Z] CRITICAL ERROR {
+  "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+  "stack": "Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\n    at handleResponseNotOk (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14533:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14505:9)\n    at async generateContent (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:14947:22)\n    at async POST (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\[root-of-the-server]__470cc2ac._.js:182:24)\n    at async AppRouteRouteModule.do (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:37789)\n    at async AppRouteRouteModule.handle (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:5:45045)\n    at async responseGenerator (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15863:38)\n    at async AppRouteRouteModule.handleResponse (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\compiled\\next-server\\app-route-turbo.runtime.dev.js:1:187851)\n    at async handleResponse (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15925:32)\n    at async handler (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\.next\\dev\\server\\chunks\\9f673_6ced04af._.js:15978:13)\n    at async DevServer.renderToResponseWithComponentsImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1413:9)\n    at async DevServer.renderPageComponent (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1465:24)\n    at async DevServer.renderToResponseImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1515:32)\n    at async DevServer.pipeImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:1021:25)\n    at async NextNodeServer.handleCatchallRenderRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\next-server.js:394:17)\n    at async DevServer.handleRequestImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\base-server.js:912:17)\n    at async C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:382:20\n    at async Span.traceAsyncFn (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\trace\\trace.js:157:20)\n    at async DevServer.handleRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\dev\\next-dev-server.js:378:24)\n    at async invokeRender (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:240:21)\n    at async handleRequest (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:436:24)\n    at async requestHandlerImpl (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\router-server.js:484:13)\n    at async Server.requestListener (C:\\Users\\ermma\\.gemini\\antigravity\\scratch\\storybook-ai\\node_modules\\next\\dist\\server\\lib\\start-server.js:226:13)",
+  "details": "{\"stack\":\"Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\\n    at handleResponseNotOk (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14533:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async makeRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14505:9)\\n    at async generateContent (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:14947:22)\\n    at async POST (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\[root-of-the-server]__470cc2ac._.js:182:24)\\n    at async AppRouteRouteModule.do (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:5:37789)\\n    at async AppRouteRouteModule.handle (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:5:45045)\\n    at async responseGenerator (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15863:38)\\n    at async AppRouteRouteModule.handleResponse (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\compiled\\\\next-server\\\\app-route-turbo.runtime.dev.js:1:187851)\\n    at async handleResponse (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15925:32)\\n    at async handler (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\.next\\\\dev\\\\server\\\\chunks\\\\9f673_6ced04af._.js:15978:13)\\n    at async DevServer.renderToResponseWithComponentsImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1413:9)\\n    at async DevServer.renderPageComponent (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1465:24)\\n    at async DevServer.renderToResponseImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1515:32)\\n    at async DevServer.pipeImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:1021:25)\\n    at async NextNodeServer.handleCatchallRenderRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\next-server.js:394:17)\\n    at async DevServer.handleRequestImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\base-server.js:912:17)\\n    at async C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\dev\\\\next-dev-server.js:382:20\\n    at async Span.traceAsyncFn (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\trace\\\\trace.js:157:20)\\n    at async DevServer.handleRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\dev\\\\next-dev-server.js:378:24)\\n    at async invokeRender (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:240:21)\\n    at async handleRequest (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:436:24)\\n    at async requestHandlerImpl (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\router-server.js:484:13)\\n    at async Server.requestListener (C:\\\\Users\\\\ermma\\\\.gemini\\\\antigravity\\\\scratch\\\\storybook-ai\\\\node_modules\\\\next\\\\dist\\\\server\\\\lib\\\\start-server.js:226:13)\",\"message\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\",\"status\":404,\"statusText\":\"Not Found\"}"
+}
+[2026-04-30T08:37:14.995Z] Story generation API called 
+[2026-04-30T08:37:14.997Z] Request body received {
+  "name": "Test",
+  "age": "5",
+  "interests": "Uzay",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-04-30T08:37:14.998Z] API Key check {
+  "exists": true
+}
+[2026-04-30T08:37:14.998Z] Initializing model: gemini-2.5-flash 
+[2026-04-30T08:37:14.999Z] Sending prompt to Gemini... 
+[2026-04-30T08:37:15.026Z] Story generation API called 
+[2026-04-30T08:37:15.028Z] Request body received {
+  "name": "Test",
+  "age": "5",
+  "interests": "Uzay",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-04-30T08:37:15.029Z] API Key check {
+  "exists": true
+}
+[2026-04-30T08:37:15.030Z] Initializing model: gemini-2.5-flash 
+[2026-04-30T08:37:15.030Z] Sending prompt to Gemini... 
+[2026-04-30T08:37:36.663Z] Gemini response received 
+[2026-04-30T08:37:36.665Z] Raw text length 4788
+[2026-04-30T08:37:37.870Z] Gemini response received 
+[2026-04-30T08:37:37.871Z] Raw text length 5243
+[2026-05-07T07:51:54.697Z] Story generation API called 
+[2026-05-07T07:51:54.699Z] Request body received {
+  "name": "ahmet",
+  "age": "3",
+  "interests": "kurabiyeler",
+  "theme": "🎪 Neşeli Ev",
+  "locale": "tr"
+}
+[2026-05-07T07:51:54.700Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:51:54.700Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:51:54.701Z] Sending prompt to Gemini... 
+[2026-05-07T07:51:54.709Z] Story generation API called 
+[2026-05-07T07:51:54.710Z] Request body received {
+  "name": "ahmet",
+  "age": "3",
+  "interests": "kurabiyeler",
+  "theme": "🎪 Neşeli Ev",
+  "locale": "tr"
+}
+[2026-05-07T07:51:54.711Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:51:54.712Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:51:54.712Z] Sending prompt to Gemini... 
+[2026-05-07T07:52:11.643Z] Gemini response received 
+[2026-05-07T07:52:11.644Z] Raw text length 5867
+[2026-05-07T07:52:13.290Z] Gemini response received 
+[2026-05-07T07:52:13.291Z] Raw text length 5059
+[2026-05-07T07:53:48.733Z] Story generation API called 
+[2026-05-07T07:53:48.734Z] Request body received {
+  "name": "sanem",
+  "age": "4",
+  "interests": "basketbol",
+  "theme": "🏫 Sihirli Okul",
+  "locale": "tr"
+}
+[2026-05-07T07:53:48.734Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:53:48.735Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:53:48.735Z] Sending prompt to Gemini... 
+[2026-05-07T07:53:48.748Z] Story generation API called 
+[2026-05-07T07:53:48.749Z] Request body received {
+  "name": "sanem",
+  "age": "4",
+  "interests": "basketbol",
+  "theme": "🏫 Sihirli Okul",
+  "locale": "tr"
+}
+[2026-05-07T07:53:48.749Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:53:48.750Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:53:48.751Z] Sending prompt to Gemini... 
+[2026-05-07T07:54:07.317Z] Gemini response received 
+[2026-05-07T07:54:07.317Z] Raw text length 5252
+[2026-05-07T07:54:10.286Z] Gemini response received 
+[2026-05-07T07:54:10.287Z] Raw text length 5508
+[2026-05-07T07:56:46.592Z] Story generation API called 
+[2026-05-07T07:56:46.593Z] Request body received {
+  "name": "Elif",
+  "age": "4",
+  "interests": "havuzda yuzmek",
+  "theme": "🏙️ Renkli Şehir",
+  "locale": "tr"
+}
+[2026-05-07T07:56:46.594Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:56:46.594Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:56:46.595Z] Sending prompt to Gemini... 
+[2026-05-07T07:56:46.608Z] Story generation API called 
+[2026-05-07T07:56:46.610Z] Request body received {
+  "name": "Elif",
+  "age": "4",
+  "interests": "havuzda yuzmek",
+  "theme": "🏙️ Renkli Şehir",
+  "locale": "tr"
+}
+[2026-05-07T07:56:46.610Z] API Key check {
+  "exists": true
+}
+[2026-05-07T07:56:46.611Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T07:56:46.611Z] Sending prompt to Gemini... 
+[2026-05-07T07:57:06.723Z] Gemini response received 
+[2026-05-07T07:57:06.723Z] Raw text length 5105
+[2026-05-07T07:57:07.237Z] Gemini response received 
+[2026-05-07T07:57:07.238Z] Raw text length 5449
+[2026-05-07T08:14:08.452Z] Story generation API called 
+[2026-05-07T08:14:08.453Z] Request body received {
+  "name": "selin",
+  "age": "4",
+  "interests": "balonlar",
+  "theme": "🏰 Prenses Şatosu",
+  "locale": "tr"
+}
+[2026-05-07T08:14:08.454Z] API Key check {
+  "exists": true
+}
+[2026-05-07T08:14:08.455Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T08:14:08.455Z] Sending prompt to Gemini... 
+[2026-05-07T08:14:08.471Z] Story generation API called 
+[2026-05-07T08:14:08.473Z] Request body received {
+  "name": "selin",
+  "age": "4",
+  "interests": "balonlar",
+  "theme": "🏰 Prenses Şatosu",
+  "locale": "tr"
+}
+[2026-05-07T08:14:08.473Z] API Key check {
+  "exists": true
+}
+[2026-05-07T08:14:08.474Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T08:14:08.474Z] Sending prompt to Gemini... 
+[2026-05-07T08:14:26.458Z] Gemini response received 
+[2026-05-07T08:14:26.460Z] Raw text length 4903
+[2026-05-07T08:14:27.697Z] Gemini response received 
+[2026-05-07T08:14:27.699Z] Raw text length 5208
+[2026-05-07T08:15:18.805Z] Story generation API called 
+[2026-05-07T08:15:18.807Z] Request body received {
+  "name": "selen",
+  "age": "4",
+  "interests": "dinazorlar",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-05-07T08:15:18.807Z] API Key check {
+  "exists": true
+}
+[2026-05-07T08:15:18.808Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T08:15:18.808Z] Sending prompt to Gemini... 
+[2026-05-07T08:15:18.822Z] Story generation API called 
+[2026-05-07T08:15:18.823Z] Request body received {
+  "name": "selen",
+  "age": "4",
+  "interests": "dinazorlar",
+  "theme": "🌳 Macera Dolu Orman",
+  "locale": "tr"
+}
+[2026-05-07T08:15:18.824Z] API Key check {
+  "exists": true
+}
+[2026-05-07T08:15:18.824Z] Initializing model: gemini-2.5-flash 
+[2026-05-07T08:15:18.825Z] Sending prompt to Gemini... 
+[2026-05-07T08:15:39.104Z] Gemini response received 
+[2026-05-07T08:15:39.105Z] Raw text length 5566
+[2026-05-07T08:15:40.745Z] Gemini response received 
+[2026-05-07T08:15:40.746Z] Raw text length 5422

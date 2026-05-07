@@ -53,19 +53,11 @@ export default function AdminPage() {
                     <h2 className="text-2xl font-semibold mb-4 text-blue-400">Hikaye Yarat Tıklamaları</h2>
                     <div className="text-5xl font-bold mb-6 text-center">{totalClicks}</div>
                     
-                    <div className="grid grid-cols-2 gap-4">
+                    <div>
                         <div>
                             <h3 className="text-lg text-gray-400 mb-2 border-b border-gray-700 pb-1">Dillere Göre</h3>
                             <ul className="space-y-1">
                                 {Object.entries(clickStats?.byLocale || {}).map(([key, value]) => (
-                                    <li key={key} className="flex justify-between"><span>{key}:</span> <span className="font-bold">{String(value)}</span></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg text-gray-400 mb-2 border-b border-gray-700 pb-1">Ülkelere Göre</h3>
-                            <ul className="space-y-1">
-                                {Object.entries(clickStats?.byCountry || {}).map(([key, value]) => (
                                     <li key={key} className="flex justify-between"><span>{key}:</span> <span className="font-bold">{String(value)}</span></li>
                                 ))}
                             </ul>
@@ -78,19 +70,11 @@ export default function AdminPage() {
                     <h2 className="text-2xl font-semibold mb-4 text-green-400">Tamamlanan Hikayeler</h2>
                     <div className="text-5xl font-bold mb-6 text-center">{totalCompletions}</div>
                     
-                    <div className="grid grid-cols-2 gap-4">
+                    <div>
                         <div>
                             <h3 className="text-lg text-gray-400 mb-2 border-b border-gray-700 pb-1">Dillere Göre</h3>
                             <ul className="space-y-1">
                                 {Object.entries(completionStats?.byLocale || {}).map(([key, value]) => (
-                                    <li key={key} className="flex justify-between"><span>{key}:</span> <span className="font-bold">{String(value)}</span></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg text-gray-400 mb-2 border-b border-gray-700 pb-1">Ülkelere Göre</h3>
-                            <ul className="space-y-1">
-                                {Object.entries(completionStats?.byCountry || {}).map(([key, value]) => (
                                     <li key={key} className="flex justify-between"><span>{key}:</span> <span className="font-bold">{String(value)}</span></li>
                                 ))}
                             </ul>

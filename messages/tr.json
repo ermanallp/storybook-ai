@@ -45,7 +45,8 @@
       "a2": "Evet, Kidoredo'da güvenlik önceliğimizdir. Hikaye üretim sürecinde gelişmiş filtreleme sistemleri kullanarak, içeriklerin tamamen çocuk dostu ve pedagojik standartlara uygun olmasını sağlıyoruz.",
       "q3": "Kidoredo'da kendi karakterlerimizi oluşturabilir miyiz?",
       "a3": "Kesinlikle! Çocuklar hikayenin kahramanını, fiziksel özelliklerini ve karakter yapısını kendileri belirleyebilir, hatta kendi isimlerini hikayeye dahil edebilirler."
-    }
+    },
+    "limitReached": "Yeni bir hikaye oluşturmak için lütfen giriş yapın veya üye olun. (3 günde 1 ücretsiz hikaye hakkınız doldu.)"
   },
   "GeneratePage": {
     "status_generating": "Hikayen yazılıyor...",

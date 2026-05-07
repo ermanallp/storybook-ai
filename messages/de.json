@@ -45,7 +45,8 @@
       "a2": "Yes, safety is our top priority. We use advanced filtering systems to ensure all generated content is completely child-friendly and meets pedagogical standards.",
       "q3": "Can we create our own characters in Kidoredo?",
       "a3": "Absolutely! Children can determine the hero, their physical features, and personality, and even include their own names in the story."
-    }
+    },
+    "limitReached": "Bitte melden Sie sich an oder registrieren Sie sich, um eine weitere Geschichte zu erstellen. (Ihr Limit von 1 kostenlosen Geschichte pro 3 Tage ist erreicht.)"
   },
   "GeneratePage": {
     "status_generating": "Deine Geschichte wird geschrieben...",

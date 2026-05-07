@@ -25,20 +25,25 @@ export default function SignUp() {
                 displayName: name,
             });
 
-            // Check for pending story
+            // Prepare target URL
+            let targetUrl = "/";
             const pendingStory = localStorage.getItem('pendingStory');
             if (pendingStory) {
                 try {
                     const storyData = JSON.parse(pendingStory);
                     const queryParams = new URLSearchParams(storyData).toString();
                     localStorage.removeItem('pendingStory'); // Clear it immediately
-                    router.push(`/story/generate?${queryParams}`);
+                    targetUrl = `/story/generate?${queryParams}`;
                 } catch (e) {
                     console.error("Error parsing pending story:", e);
-                    router.push("/");
                 }
+            }
+
+            // Track conversion and route
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+                (window as any).gtag_report_conversion(targetUrl, () => router.push(targetUrl));
             } else {
-                router.push("/");
+                router.push(targetUrl);
             }
         } catch (err: any) {
             console.error("Signup error:", err);

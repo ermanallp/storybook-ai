@@ -30,8 +30,20 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
 
-    // Temporarily allow anonymous users to create stories
-    // if (!user) { ... }
+    // Enforce 3-day limit for anonymous users
+    if (!user) {
+        const lastFreeStoryDate = localStorage.getItem('lastFreeStoryDate');
+        if (lastFreeStoryDate) {
+            const lastDate = parseInt(lastFreeStoryDate, 10);
+            const threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
+            if (Date.now() - lastDate < threeDaysInMs) {
+                alert(t('limitReached'));
+                setLoading(false);
+                router.push('/login');
+                return;
+            }
+        }
+    }
 
     try {
         await fetch('/api/track-click', {

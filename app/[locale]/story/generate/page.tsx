@@ -52,6 +52,9 @@ function GenerateStoryContent() {
 
                 const story: Story = await response.json();
 
+                // Record successful generation time for limit tracking
+                localStorage.setItem('lastFreeStoryDate', Date.now().toString());
+
                 // Save initial text-only story
                 await saveStory(story);
 

@@ -107,8 +107,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
         `}
       </Script>
+      {/* Google tag (gtag.js) event - delayed navigation helper */}
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          function gtagSendEvent(url, nextRouterCallback) {
+            var callback = function () {
+              if (typeof nextRouterCallback === 'function') {
+                nextRouterCallback();
+              } else if (typeof url === 'string') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion_event_signup_1', {
+              'event_callback': callback,
+              'event_timeout': 2000
+            });
+            return false;
+          }
+          // Alias as requested by Google Ads instructions
+          window.gtag_report_conversion = gtagSendEvent;
+        `}
+      </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <noscript>
           <iframe
