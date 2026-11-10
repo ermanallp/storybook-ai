@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@capacitor/core": "^8.4.1",
     "@google/generative-ai": "^0.24.1",
     "@next/third-parties": "^16.1.6",
     "firebase": "^12.9.0",
@@ -20,6 +21,8 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/ios": "^8.4.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

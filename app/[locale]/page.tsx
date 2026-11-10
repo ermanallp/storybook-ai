@@ -7,9 +7,6 @@ import { BookOpen, Sparkles, Star } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 
-import { signOut } from 'firebase/auth';
-import { auth } from '@/app/lib/firebase';
-import { useAuth } from '@/components/auth/AuthProvider';
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQComponent from '@/components/FAQComponent';
@@ -24,26 +21,10 @@ export default function Home() {
   const [interests, setInterests] = useState('');
   const [theme, setTheme] = useState('macera');
   const [loading, setLoading] = useState(false);
-  const { user } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
-    // Enforce 3-day limit for anonymous users
-    if (!user) {
-        const lastFreeStoryDate = localStorage.getItem('lastFreeStoryDate');
-        if (lastFreeStoryDate) {
-            const lastDate = parseInt(lastFreeStoryDate, 10);
-            const threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
-            if (Date.now() - lastDate < threeDaysInMs) {
-                alert(t('limitReached'));
-                setLoading(false);
-                router.push('/login');
-                return;
-            }
-        }
-    }
 
     try {
         await fetch('/api/track-click', {
@@ -67,10 +48,6 @@ export default function Home() {
     router.push(`story/generate?${queryParams}`);
   };
 
-  const handleLogout = async () => {
-    if (auth) await signOut(auth);
-  };
-
   return (
     <main className="min-h-screen relative flex flex-col items-center justify-start md:justify-center px-4 pb-12 pt-24 sm:p-4 overflow-x-hidden overflow-y-auto">
       {/* Background Image */}
@@ -90,23 +67,6 @@ export default function Home() {
 
       <div className="absolute top-4 right-4 z-20 flex gap-2 sm:gap-4 items-center">
         <LanguageSwitcher />
-        {!user ? (
-          <>
-            <Link href="/login" className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm font-semibold transition-all border border-white/30 shadow-lg">
-              {t('login')}
-            </Link>
-            <Link href="/signup" className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-yellow-400 hover:bg-yellow-300 text-purple-900 rounded-lg font-bold transition-all shadow-lg">
-              {t('signup')}
-            </Link>
-          </>
-        ) : (
-          <button
-            onClick={handleLogout}
-            className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base bg-red-500/80 hover:bg-red-500 text-white rounded-lg backdrop-blur-sm font-semibold transition-all shadow-lg border border-white/20"
-          >
-            {t('logout')}
-          </button>
-        )}
       </div>
 
       {/* Testimonials Desktop (absolutely positioned relative to viewport) */}

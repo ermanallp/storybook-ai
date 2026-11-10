@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from "next/navigation";
-import { AuthProvider } from "@/components/auth/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +15,15 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export async function generateMetadata({
   params
@@ -64,6 +72,12 @@ export async function generateMetadata({
         'ko': `${baseUrl}/ko`,
       },
     },
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: "Kidoredo",
+    },
   };
 }
 
@@ -107,27 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
         `}
       </Script>
-      {/* Google tag (gtag.js) event - delayed navigation helper */}
-      <Script id="google-ads-conversion" strategy="afterInteractive">
-        {`
-          function gtagSendEvent(url, nextRouterCallback) {
-            var callback = function () {
-              if (typeof nextRouterCallback === 'function') {
-                nextRouterCallback();
-              } else if (typeof url === 'string') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion_event_signup_1', {
-              'event_callback': callback,
-              'event_timeout': 2000
-            });
-            return false;
-          }
-          // Alias as requested by Google Ads instructions
-          window.gtag_report_conversion = gtagSendEvent;
-        `}
-      </Script>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
@@ -141,32 +135,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <NextIntlClientProvider messages={messages}>
-          <AuthProvider>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "SoftwareApplication",
-                  "name": "Kidoredo",
-                  "applicationCategory": "EducationalApplication",
-                  "operatingSystem": "Web",
-                  "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                  },
-                  "description": "Create magical, personalized AI stories where your child is the hero!",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "ratingCount": "120"
-                  }
-                }),
-              }}
-            />
-            {children}
-          </AuthProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Kidoredo",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+                },
+                "description": "Create magical, personalized AI stories where your child is the hero!",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "ratingCount": "120"
+                }
+              }),
+            }}
+          />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>
